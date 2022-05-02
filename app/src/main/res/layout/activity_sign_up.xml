@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <EditText
+        android:id="@+id/register_editEmail"
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Įveskite el. paštą"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="277dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="@string/signup"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="jelly_bean" />
+
+    <Button
+        android:id="@+id/register_buttonSignUp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#33C639"
+        android:text="@string/signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_editPassword" />
+
+    <Button
+        android:id="@+id/register_buttonBack"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#33C639"
+        android:text="Atgal"
+        app:layout_constraintEnd_toEndOf="@+id/register_buttonSignUp"
+        app:layout_constraintStart_toStartOf="@+id/register_buttonSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/register_buttonSignUp" />
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/loginhere"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_buttonSignUp"
+        tools:targetApi="jelly_bean" />
+
+    <EditText
+        android:id="@+id/register_editUsername"
+        android:layout_width="259dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Įveskite slapyvardį"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/register_editEmail"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="@+id/register_editEmail"
+        app:layout_constraintTop_toBottomOf="@+id/register_editEmail" />
+
+    <EditText
+        android:id="@+id/register_editPassword"
+        android:layout_width="257dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Įveskite slaptažodį"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/register_editUsername"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/register_editUsername"
+        app:layout_constraintTop_toBottomOf="@+id/register_editUsername" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

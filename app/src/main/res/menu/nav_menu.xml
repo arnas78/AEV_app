@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Programele">
+        <menu>
+                <group android:checkableBehavior="single">
+                        <item
+                            android:id="@+id/nav_home"
+                            android:icon="@drawable/ic_baseline_home_24"
+                            android:title="Pagrindinis"/>
+
+                        <item
+                            android:id="@+id/nav_device"
+                            android:icon="@drawable/ic_baseline_devices_24"
+                            android:title="Mano Irenginiai"/>
+
+                        <item
+                            android:id="@+id/nav_levels"
+                            android:icon="@drawable/ic_baseline_attractions_24"
+                            android:title="Mano Lygis"/>
+
+                        <item
+                            android:id="@+id/nav_settings"
+                            android:icon="@drawable/ic_baseline_settings_24"
+                            android:title="Nustatymai"/>
+
+                        <item
+                            android:id="@+id/nav_review"
+                            android:icon="@drawable/ic_baseline_rate_review_24"
+                            android:title="Atsiliepimai"/>
+
+                        <item
+                            android:id="@+id/nav_login"
+                            android:icon="@drawable/ic_baseline_login_24"
+                            android:title="Atsijungti"/>
+                </group>
+
+
+
+
+
+        </menu>
+
+
+    </item>
+
+</menu>

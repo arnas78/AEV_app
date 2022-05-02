@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Programele</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signuphere">Neturite paskyros? Prisiregistruokite</string>
+    <string name="login">Prisijungti</string>
+    <string name="password">Slaptazodis</string>
+    <string name="username">Vartotojas</string>
+    <string name="loginhere">Jau turite paskyra? Prisijunkite</string>
+    <string name="signup">Registracija</string>
+    <string name="email">El.Pastas</string>
+    <string name="fullname">Vardas Pavarde</string>
+</resources>

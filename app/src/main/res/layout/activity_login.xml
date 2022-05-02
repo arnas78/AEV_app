@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <Button
+        android:id="@+id/login_btnRegister"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#33C639"
+        android:text="@string/signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btnLogin" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="297dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="jelly_bean" />
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:layout_editor_absoluteY="82dp" />-->
+
+
+    <Button
+        android:id="@+id/login_btnLogin"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#33C639"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_signUpText" />
+
+    <EditText
+        android:id="@+id/usernameLogin"
+        android:layout_width="304dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Įveskite el. paštą"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="304dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Įveskite slaptažodį"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/usernameLogin"
+        app:layout_constraintStart_toStartOf="@+id/usernameLogin"
+        app:layout_constraintTop_toBottomOf="@+id/usernameLogin" />
+
+    <TextView
+        android:id="@+id/login_signUpText"
+        android:layout_width="304dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Pamiršau prisijungimo duomenis"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

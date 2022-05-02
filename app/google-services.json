@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "893375398052",
+    "project_id": "aev-programele",
+    "storage_bucket": "aev-programele.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893375398052:android:90016ab41472d151f8a631",
+        "android_client_info": {
+          "package_name": "com.example.programele"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893375398052-fok49sp8r23grv6t4fgol664m48f6d33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnl6N5Xg9M9qrJUDIQPVcXJ8u1VYV8sG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893375398052-fok49sp8r23grv6t4fgol664m48f6d33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
