@@ -4,18 +4,115 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatarimaiFrag">
+    tools:context=".PatarimaiFrag"
+    android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
+        android:id="@+id/pat1L"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="109dp"
-        android:layout_marginBottom="110dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="1. Rinkitės aukšto energetinio efektyvumo prietaisus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/pirmasPat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat1L" />
+
+    <TextView
+        android:id="@+id/pat2L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="2. Pasikeiskite senas lemputes į LED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat1" />
+
+    <TextView
+        android:id="@+id/pat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/antrasPat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat2L" />
+
+    <ImageView
+        android:id="@+id/AntPat"
+        android:layout_width="359dp"
+        android:layout_height="233dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/patarimai" />
+        app:layout_constraintTop_toBottomOf="@+id/pat2"
+        tools:src="@drawable/pat2" />
+
+    <TextView
+        android:id="@+id/pat3L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="3. Nenaudojamus prietaisus išjunkite iš tinklo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AntPat" />
+
+    <TextView
+        android:id="@+id/pat3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/treciasPat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat3L" />
+
+    <TextView
+        android:id="@+id/pat4L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="4. Skalbkite ekonomiškai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat3" />
+
+    <TextView
+        android:id="@+id/pat4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ketvirtasPat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat4L" />
+
+    <ImageView
+        android:id="@+id/KetPat"
+        android:layout_width="359dp"
+        android:layout_height="233dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pat4"
+        tools:src="@drawable/pat4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
