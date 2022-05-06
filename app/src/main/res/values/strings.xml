@@ -41,4 +41,9 @@ prikrauta ji sunaudoja tiek pat elektros ir karšto vandens kiek pilna. Tiesą
 sakant, skalbimo mašina daugiausiai energijos sunaudoja vandens kaitinimui.
 Skalbdami savo drabužius žemesnės temperatūros vandenyje, per metus galite
 sutaupyti apie 80 eurų.</string>
+    <string name="add_devices">Įtraukti prietaisą</string>
+    <string name="choose_group">Pasirinkti vartojimo klasę</string>
+    <string name="ivestiprietaisa">Įveskite prietaiso pavadinimą</string>
+    <string name="energija">Įveskite energijos kiekį</string>
+    <string name="atsakymas">Įrašymo atsakymas bus pateiktas čia</string>
 </resources>

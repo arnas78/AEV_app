@@ -3,6 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/drawable/ic_baseline_attractions_24.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/drawable/ic_baseline_devices_24.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/drawable/ic_baseline_rate_review_24.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/drawable/ic_launcher_background.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/activity_add_device.xml" value="0.264" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/activity_login.xml" value="0.26358695652173914" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/activity_main.xml" value="0.19655521783181357" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/add_device.xml" value="0.264" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/fragment_devices.xml" value="0.264" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/fragment_feedback.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/fragment_home.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/fragment_level.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/fragment_patarimai.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/fragment_settings.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/layout/nav_header.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/menu/nav_menu.xml" value="0.4041666666666667" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.391" />
+        <entry key="..\:/Adminbam/KTU/PVP/AEV-programele/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.391" />
         <entry key="..\:/Appsai/Programele/app/src/main/res/layout/activity_login.xml" value="0.2028985507246377" />
         <entry key="..\:/Appsai/Programele/app/src/main/res/layout/activity_main.xml" value="0.2028985507246377" />
         <entry key="..\:/Appsai/Programele/app/src/main/res/layout/activity_sign_up.xml" value="0.2028985507246377" />
