@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="underline">#0892A5</color>
     <color name="base_green">#33C639</color>
+    <color name="electric_main">#0892A5</color>
+    <color name="electric_secondary">#06908F</color>
+    <color name="electric_light">#0CA4A5</color>
+    <color name="electric_grey">#5a6363</color>
+    <color name="grey_blue">#033b3f</color>
 </resources>

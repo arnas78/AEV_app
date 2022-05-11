@@ -5,7 +5,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="signuphere">Neturite paskyros? Prisiregistruokite</string>
-    <string name="login">Prisijungti</string>
+    <string name="login">Prisijungimas</string>
     <string name="password">Slaptazodis</string>
     <string name="username">Vartotojas</string>
     <string name="loginhere">Jau turite paskyra? Prisijunkite</string>
