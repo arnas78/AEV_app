@@ -6,22 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".SignUp">
 
-     <TextView
-            android:id="@+id/textView"
-            android:layout_width="277dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="148dp"
-            android:fontFamily="@font/poppinsbold"
-            android:gravity="center"
-            android:text="@string/add_devices"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.559"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:targetApi="jelly_bean" />
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="277dp"
+       android:layout_height="56dp"
+       android:layout_marginTop="156dp"
+       android:fontFamily="@font/poppinsbold"
+       android:gravity="center"
+       android:text="@string/add_devices"
+       android:textSize="30sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:targetApi="jelly_bean" />
 
-        <TextView
+   <TextView
             android:id="@+id/textView2"
             android:layout_width="277dp"
             android:layout_height="56dp"
@@ -87,19 +86,20 @@
             app:layout_constraintStart_toEndOf="@+id/aa"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <RadioButton
-            android:id="@+id/a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1"
-            android:text="A+"
-            app:layout_constraintBottom_toTopOf="@+id/confirm"
-            app:layout_constraintEnd_toStartOf="@+id/aa"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    <RadioButton
+        android:id="@+id/a"
+        android:layout_width="63dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:text="A+"
+        app:layout_constraintBottom_toTopOf="@+id/confirm"
+        app:layout_constraintEnd_toStartOf="@+id/aa"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <RadioButton
+    <RadioButton
             android:id="@+id/aa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
