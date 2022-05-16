@@ -1,18 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="4dp"
+    android:scrollbarThumbVertical="@color/newTeal"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/newDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFrag">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/backgroundbig"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_changePicture"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_changePicture"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_changePicture" />
+
+    <EditText
+        android:id="@+id/userProfile_editSurname"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/newTeal"
+        android:textColorHint="@color/newWhiteDark"
+        android:hint="Įveskite pavardę"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_surname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_surname"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_surname"
+        tools:ignore="RtlSymmetry" />
+
     <TextView
+        android:id="@+id/userProfile_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Nustatymai"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        />
+        android:layout_marginTop="16dp"
+        android:text="Pavardė"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_editName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_editName"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_editName" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/userProfile_editName"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/newTeal"
+        android:textColorHint="@color/newWhiteDark"
+        android:hint="Įveskite vardą"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_name"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_name"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/userProfile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Vardas"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_editUsername"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_editUsername"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_editUsername" />
+
+    <Button
+        android:id="@+id/userProfile_btnSave"
+
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/button_round"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Išsaugoti"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:backgroundTint="@color/newTeal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_editSurname"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/userProfile_btnBack"
+        android:layout_width="110dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/button_round"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Atgal"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:backgroundTint="@color/newTeal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_editSurname"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/userProfile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Slapyvardis"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_changePicture"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_changePicture" />
+
+    <EditText
+        android:id="@+id/userProfile_editUsername"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/newTeal"
+        android:textColorHint="@color/newWhiteDark"
+        android:hint="Įveskite slapyvardį"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_username"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_username"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_username"
+        tools:ignore="RtlSymmetry" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile_profilePicture"
+        android:layout_width="151dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/user_image"
+        app:civ_border_color="@color/newTeal"
+        app:civ_border_width="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/userProfile_changePicture"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Keisti profilio nuotrauką"
+        android:textAppearance="@style/categories_white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_profilePicture"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_profilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_profilePicture" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+

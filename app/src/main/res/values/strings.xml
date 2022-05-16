@@ -6,44 +6,82 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="signuphere">Neturite paskyros? Prisiregistruokite</string>
     <string name="login">Prisijungimas</string>
-    <string name="password">Slaptazodis</string>
+    <string name="password">Slaptažodis</string>
     <string name="username">Vartotojas</string>
-    <string name="loginhere">Jau turite paskyra? Prisijunkite</string>
+    <string name="loginhere">Jau turite paskyrą? Prisijunkite</string>
     <string name="signup">Registracija</string>
-    <string name="email">El.Pastas</string>
-    <string name="fullname">Vardas Pavarde</string>
-    <string name="pirmasPat">Energetinis
-efektyvumas žymimas raidėmis nuo A+++ (pats geriausias) iki F (pats
-blogiausias). Jis rodo, kaip efektyviai ir ekonomiškai prietaisas naudoja elektros
-energiją. Taupesni prietaisai kainuoja daugiau, bet ir leidžia jums daugiau
-sutaupyti. Pavyzdžiui, A+++ klasės skalbimo mašina vienuolikos metų
-laikotarpyje sunaudos maždaug 75 eurais mažiau elektros nei A+ klasės. O
-A+++ klasės šaldiklis per savo gyvavimo laiką jums sutaupys net 370 eurų,
-lyginant su A+ prietaisu. Pagalvokit, kiek prietaisų namie turite. Jei jie žemos
-energetinės klasės, kalba eina jau ne apie dešimtis, o šimtus eurų.</string>
-    <string name="antrasPat">Statistika labai iškalbinga. Pasikeitus
-senovines lemputes į LED technologiją, elektros išlaidas apšvietimui galite
-sumažinti 50–90 %. Tradicinę 60 vatų lemputę pakeitę 10 vatų LED, per metus
-galite susimažinti elektros sąskaitą net iki 15 eurų. Ir čia tik viena lemputė!
-Beje, nors LED lemputės brangesnės, jos ir tarnauja ilgiau, tad ilguoju
-laikotarpiu vis tiek sutaupote.</string>
-    <string name="treciasPat">Kad ir kokie modernūs
-prietaisai jūsų namuose, veikdami budėjimo (angl. stand-by) režimu jie vis tiek
-nuolat naudoja elektros energiją (net ir į rozetę įjungtas mobilaus telefono
-kroviklis). Kitaip tariant, jūs kiekvieną mėnesį mokate už nesinaudojimą
-prietaisais. Didžiosios Britanijos energijos efektyvumo organizacijos „Energy
-Saving Trust“ duomenimis, vien prisimindami iš tinklo išjungti prietaisus, per
-metus galite sutaupyti iki 35 eurų. Taigi išjungę be reikalo įjungtas šviesas, nuo
-vienos lemputės kas valandą sutaupote po centą.</string>
-    <string name="ketvirtasPat">Skalbimo mašiną junkite tik tada, kai ji pilna (nebent
-ji moderni ir turi ekonominę funkciją, įvertinančią skalbinių kiekį). Pusiau
-prikrauta ji sunaudoja tiek pat elektros ir karšto vandens kiek pilna. Tiesą
-sakant, skalbimo mašina daugiausiai energijos sunaudoja vandens kaitinimui.
-Skalbdami savo drabužius žemesnės temperatūros vandenyje, per metus galite
-sutaupyti apie 80 eurų.</string>
+    <string name="email">El.Paštas</string>
+    <string name="fullname">Vardas Pavardė</string>
+
+    <string name="pirmasPat">Taupesni prietaisai kainuoja daugiau, bet ir leidžia jums daugiau
+        sutaupyti. Pavyzdžiui, A+++ klasės skalbimo mašina vienuolikos metų
+        laikotarpyje sunaudos maždaug 75 eurais mažiau elektros nei A+ klasės. O
+        A+++ klasės šaldiklis per savo gyvavimo laiką jums sutaupys net 370 eurų,
+        lyginant su A+ prietaisu. Pagalvokit, kiek prietaisų namie turite. Jei jie žemos
+        energetinės klasės, kalba eina jau ne apie dešimtis, o šimtus eurų.
+    </string>
+    <string name="pirmasIz">
+        1. Rinkitės aukšto energetinio efektyvumo prietaisus
+    </string>
+
+    <string name="antrasPat">Pasikeitus
+        senovines lemputes į LED technologiją, elektros išlaidas apšvietimui galite
+        sumažinti 50–90 %. Tradicinę 60 vatų lemputę pakeitę 10 vatų LED, per metus
+        galite susimažinti elektros sąskaitą net iki 15 eurų. Ir čia tik viena lemputė!
+        Beje, nors LED lemputės brangesnės, jos ir tarnauja ilgiau, tad ilguoju
+        laikotarpiu vis tiek sutaupote.
+    </string>
+    <string name="antrasIz">
+        2. Pasikeiskite senas lemputes į LED
+    </string>
+
+    <string name="treciasPat">
+        Prietaisai jūsų namuose, veikdami budėjimo režimu
+        nuolat naudoja elektros energiją. Kiekvieną mėnesį mokate už nesinaudojimą
+        prietaisais. „Energy Saving Trust“ duomenimis, vien prisimindami iš tinklo išjungti prietaisus, per
+        metus galite sutaupyti iki 35 eurų. Taigi išjungę be reikalo įjungtas šviesas, nuo
+        vienos lemputės kas valandą sutaupote po centą.
+    </string>
+    <string name="treciasIz">
+        3. Nenaudojamus prietaisus išjunkite iš tinklo
+    </string>
+
+    <string name="ketvirtasPat">
+        Skalbimo mašiną junkite tik tada, kai ji pilna. Pusiau
+        prikrauta ji sunaudoja tiek pat elektros ir karšto vandens kiek pilna. Tiesą
+        sakant, skalbimo mašina daugiausiai energijos sunaudoja vandens kaitinimui.
+        Skalbdami savo drabužius žemesnės temperatūros vandenyje, per metus galite
+        sutaupyti apie 80 eurų.
+    </string>
+    <string name="ketvirtasIz">
+        4. Skalbkite ekonomiškai
+    </string>
+
+    <string name="penktasPat">
+        Šaldytuve pasirinkite optimalią temperatūrą. Maistui laikyti pakanka 3 laipsnių šilumos, o šaldiklyje 18 laipsnių šalčio.
+        Reguliariai atitirpinkite šaldikį. Puikus ženklas tai daryti,
+        jei susidarė 5 mm ledo sluoksnis. Kuo daugiau šaldiklyje ledo,
+        tuo daugiau sunaudojama elektros energijos.
+    </string>
+    <string name="penktasIz">
+        5. Pasirūpinkite savo šaldytuvu.
+    </string>
+
+    <string name="sestasPat">
+        Kodėl nepasinaudojus nemokama atsinaujinančia energija iš gamtos? Tai nebūtinai turi būti vėjo jėgainė jūsų kieme ar vandens malūnas upelyje. Saulės elektrinės tiek ištobulėjo, kad jas įsirengus ant namų stogo, per metus elektros išlaidos tampa 3 kartus mažesnė.
+    </string>
+    <string name="sestasIz">
+        6. Įsirenkite alternatyvios energijos sprendimą.
+    </string>
+
     <string name="add_devices">Įtraukti prietaisą</string>
     <string name="choose_group">Pasirinkti vartojimo klasę</string>
     <string name="ivestiprietaisa">Įveskite prietaiso pavadinimą</string>
     <string name="energija">Įveskite energijos kiekį</string>
     <string name="atsakymas">Įrašymo atsakymas bus pateiktas čia</string>
+    <string name="atgal_pagrindinis">Grįžti atgal į pagrindinį</string>
+    <string name="adviceFirst">Pasikeitus senovines lemputes į LED technologiją, elektros išlaidas apšvietimui galite sumažinti 50–90 %. Tradicinę 60 vatų lemputę pakeitę 10 vatų LED, per metus galite susimažinti elektros sąskaitą net iki 15 eurų.</string>
+    <string name="adviceSecond">Prietaisai, veikdami budėjimo režimu nuolat naudoja elektros energiją, todėl kiekvieną mėnesį mokate už nesinaudojimą prietaisais. „Energy Saving Trust“ duomenimis, vien prisimindami iš tinklo išjungti prietaisus, per metus galite sutaupyti iki 35 eurų.</string>
+    <string name="adviceThird">Skalbimo mašiną junkite tik tada, kai ji pilna. Pusiau prikrauta ji sunaudoja tiek pat elektros ir karšto vandens kiek pilna. Skalbdami savo drabužius žemesnės temperatūros vandenyje, per metus galite sutaupyti apie 80 eurų.</string>
 </resources>
+

@@ -14,4 +14,10 @@
     <color name="electric_light">#0CA4A5</color>
     <color name="electric_grey">#5a6363</color>
     <color name="grey_blue">#033b3f</color>
+    <color name="light_electric">#caf2f2</color>
+    <color name="newTeal">#0bd7df</color>
+    <color name="newDark">#1F2142</color>
+    <color name="newLight">#363868</color>
+    <color name="newWhiteDark">#8E8E91</color>
+    <color name="newWhite">#eceff5</color>
 </resources>

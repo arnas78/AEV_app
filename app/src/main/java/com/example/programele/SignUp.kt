@@ -33,15 +33,8 @@ class SignUp : AppCompatActivity() {
         registerTextInputEditTextUsername = findViewById(R.id.register_editUsername)
         registerTextInputEditTextPassword = findViewById(R.id.register_editPassword)
         registerTextInputEditTextEmail = findViewById(R.id.register_editEmail)
-        buttonSigUp = findViewById(R.id.register_buttonSignUp)
-        buttonBack = findViewById(R.id.register_buttonBack)
+        buttonSigUp = findViewById(R.id.register_btnRegister)
 
-        buttonBack.setOnClickListener {
-
-            val intent = Intent(this, Login::class.java);
-            startActivity(intent)
-
-        }
         buttonSigUp.setOnClickListener {
             register(it)
         }

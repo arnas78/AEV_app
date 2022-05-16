@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
-            <corners android:radius="10dp" />
+            <corners android:radius="18dp" />
             <solid android:color="@color/electric_main" />
             <padding
                 android:bottom="4dp"
@@ -13,7 +13,7 @@
     </item>
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <corners android:radius="10dp" />
+            <corners android:radius="18dp" />
             <solid android:color="@color/electric_light" />
             <stroke
                 android:width="2dip"

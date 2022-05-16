@@ -1,118 +1,510 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PatarimaiFrag"
-    android:background="@color/white">
+    android:scrollbarThumbVertical="@color/newTeal"
+    android:orientation="vertical"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/pat1L"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="1. Rinkitės aukšto energetinio efektyvumo prietaisus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/newDark"
+        tools:context=".PatarimaiFrag">
 
-    <TextView
-        android:id="@+id/pat1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/pirmasPat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat1L" />
 
-    <TextView
-        android:id="@+id/pat2L"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="2. Pasikeiskite senas lemputes į LED"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat1" />
+        <ImageView
+            android:id="@+id/imageView51"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="48dp"
+            android:src="@drawable/backgroundbig"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView47"
+            app:layout_constraintStart_toStartOf="@+id/imageView47"
+            app:layout_constraintTop_toBottomOf="@+id/imageView47" />
 
-    <TextView
-        android:id="@+id/pat2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/antrasPat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat2L" />
+        <TextView
+            android:id="@+id/advice_adviceTextFirst10"
+            android:layout_width="292dp"
+            android:layout_height="163dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_horizontal"
+            android:text="Kodėl nepasinaudojus nemokama atsinaujinančia energija iš gamtos? Tai nebūtinai turi būti vėjo jėgainė jūsų kieme ar vandens malūnas upelyje. Saulės elektrinės tiek ištobulėjo, kad jas įsirengus ant namų stogo, per metus elektros išlaidos tampa 3 kartus mažesnė."
+            android:textColor="@color/newWhite"
+            app:layout_constraintEnd_toEndOf="@+id/imageView51"
+            app:layout_constraintStart_toStartOf="@+id/imageView51"
+            app:layout_constraintTop_toBottomOf="@+id/imageView50" />
 
-    <ImageView
-        android:id="@+id/AntPat"
-        android:layout_width="359dp"
-        android:layout_height="233dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat2"
-        tools:src="@drawable/pat2" />
+        <ImageView
+            android:id="@+id/imageView48"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/sunenergy"
+            app:layout_constraintEnd_toEndOf="@+id/imageView52"
+            app:layout_constraintStart_toStartOf="@+id/imageView52"
+            app:layout_constraintTop_toBottomOf="@+id/imageView52" />
 
-    <TextView
-        android:id="@+id/pat3L"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="3. Nenaudojamus prietaisus išjunkite iš tinklo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AntPat" />
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="304dp"
+            android:background="@drawable/advicenumberbackground"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="5."
+            android:textColor="@color/newWhite"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView51"
+            app:layout_constraintTop_toBottomOf="@+id/imageView47" />
 
-    <TextView
-        android:id="@+id/pat3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/treciasPat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat3L" />
+        <ImageView
+            android:id="@+id/imageView49"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="44dp"
+            android:src="@drawable/wrong"
+            app:layout_constraintEnd_toStartOf="@+id/imageView52"
+            app:layout_constraintTop_toTopOf="@+id/imageView51" />
 
-    <TextView
-        android:id="@+id/pat4L"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="4. Skalbkite ekonomiškai"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat3" />
+        <ImageView
+            android:id="@+id/imageView50"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/windpower"
+            app:layout_constraintEnd_toEndOf="@+id/imageView49"
+            app:layout_constraintStart_toStartOf="@+id/imageView49"
+            app:layout_constraintTop_toBottomOf="@+id/imageView49" />
 
-    <TextView
-        android:id="@+id/pat4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ketvirtasPat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat4L" />
 
-    <ImageView
-        android:id="@+id/KetPat"
-        android:layout_width="359dp"
-        android:layout_height="233dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pat4"
-        tools:src="@drawable/pat4" />
+        <ImageView
+            android:id="@+id/imageView52"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/right"
+            app:layout_constraintEnd_toEndOf="@+id/imageView51"
+            app:layout_constraintTop_toTopOf="@+id/imageView51" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="132dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center_horizontal"
+            android:text="Įsirenkite alternatyvios energijos sprendimą"
+            android:textColor="@color/newWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView51"
+            app:layout_constraintTop_toTopOf="@+id/imageView51" />
+
+        <ImageView
+            android:id="@+id/imageView41"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/backgroundbig"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <ImageView
+            android:id="@+id/imageView46"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/right"
+            app:layout_constraintEnd_toEndOf="@+id/imageView41"
+            app:layout_constraintTop_toTopOf="@+id/imageView41" />
+
+        <ImageView
+            android:id="@+id/imageView45"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/wrong"
+            app:layout_constraintEnd_toStartOf="@+id/imageView46"
+            app:layout_constraintTop_toTopOf="@+id/imageView41" />
+
+        <ImageView
+            android:id="@+id/imageView47"
+            android:layout_width="340dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/backgroundbig"
+            app:layout_constraintEnd_toEndOf="@+id/imageView41"
+            app:layout_constraintStart_toStartOf="@+id/imageView41"
+            app:layout_constraintTop_toBottomOf="@+id/imageView41" />
+
+        <TextView
+            android:id="@+id/advice_adviceTextFirst8"
+            android:layout_width="294dp"
+            android:layout_height="158dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_horizontal"
+            android:text="Šaldytuve pasirinkite optimalią temperatūrą. Maistui laikyti pakanka 3 laipsnių šilumos, o šaldiklyje 18 laipsnių šalčio. Reguliariai atitirpinkite šaldikį. Puikus ženklas tai daryti, jei susidarė 5 mm ledo sluoksnis. Kuo daugiau šaldiklyje ledo, tuo daugiau sunaudojama elektros energijos. Atitirpinimą atlikite kartą į pusmetį."
+            android:textColor="@color/newWhite"
+            app:layout_constraintEnd_toEndOf="@+id/imageView47"
+            app:layout_constraintStart_toStartOf="@+id/imageView47"
+            app:layout_constraintTop_toBottomOf="@+id/imageView40" />
+
+        <ImageView
+            android:id="@+id/imageView40"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/emptyfridge"
+            app:layout_constraintEnd_toEndOf="@+id/imageView39"
+            app:layout_constraintStart_toStartOf="@+id/imageView39"
+            app:layout_constraintTop_toBottomOf="@+id/imageView39" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="121dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center_horizontal"
+            android:text="Pasirūpinkite savo šaldytuvu"
+            android:textColor="@color/newWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView47"
+            app:layout_constraintTop_toTopOf="@+id/imageView47" />
+
+        <ImageView
+            android:id="@+id/imageView39"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/wrong"
+            app:layout_constraintEnd_toStartOf="@+id/imageView38"
+            app:layout_constraintTop_toTopOf="@+id/imageView47" />
+
+        <ImageView
+            android:id="@+id/imageView38"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/right"
+            app:layout_constraintEnd_toEndOf="@+id/imageView47"
+            app:layout_constraintTop_toTopOf="@+id/imageView47" />
+
+        <ImageView
+            android:id="@+id/imageView43"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/filledfridge"
+            app:layout_constraintEnd_toEndOf="@+id/imageView38"
+            app:layout_constraintStart_toStartOf="@+id/imageView38"
+            app:layout_constraintTop_toBottomOf="@+id/imageView38" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="304dp"
+            android:background="@drawable/advicenumberbackground"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="4."
+            android:textColor="@color/newWhite"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView47"
+            app:layout_constraintTop_toBottomOf="@+id/imageView41" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="132dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center_horizontal"
+            android:text="Pasikeiskite senas lemputes į LED"
+            android:textColor="@color/newWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView41"
+            app:layout_constraintTop_toTopOf="@+id/imageView41" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="304dp"
+            android:background="@drawable/advicenumberbackground"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="3."
+            android:textColor="@color/newWhite"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView41"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <ImageView
+            android:id="@+id/imageView44"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/emptywashing"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+        <TextView
+            android:id="@+id/advice_adviceTextFirst9"
+            android:layout_width="293dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_horizontal"
+            android:text="@string/adviceThird"
+            android:textColor="@color/newWhite"
+            app:layout_constraintEnd_toEndOf="@+id/imageView41"
+            app:layout_constraintStart_toStartOf="@+id/imageView41"
+            app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+
+        <ImageView
+            android:id="@+id/imageView42"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/filledwashing"
+            app:layout_constraintEnd_toEndOf="@+id/imageView46"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView46"
+            app:layout_constraintTop_toBottomOf="@+id/imageView46" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/backgroundbig"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.255"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/filledextension"
+            app:layout_constraintEnd_toEndOf="@+id/imageView15"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="@+id/imageView15"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/right"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="47dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/emptyextension"
+            app:layout_constraintEnd_toEndOf="@+id/imageView16"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+        <TextView
+            android:id="@+id/advice_adviceTextFirst3"
+            android:layout_width="293dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_horizontal"
+            android:text="@string/adviceSecond"
+            android:textColor="@color/newWhite"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/wrong"
+            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="132dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center_horizontal"
+            android:text="Nenaudojamus prietaisus išjunkite iš tinklo"
+            android:textColor="@color/newWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="297dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Kaip sutaupyti?"
+            android:textColor="@color/newWhite"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="jelly_bean" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/backgroundbig"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/right"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/smartlight"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="132dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center_horizontal"
+            android:text="Pasikeiskite senas lemputes į LED"
+            android:textColor="@color/newWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="48dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/regularlight"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="48dp"
+            android:src="@drawable/wrong"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/advice_adviceTextFirst"
+            android:layout_width="293dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_horizontal"
+            android:text="@string/adviceFirst"
+            android:textColor="@color/newWhite"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="304dp"
+            android:background="@drawable/advicenumberbackground"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="1."
+            android:textColor="@color/newWhite"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="304dp"
+            android:background="@drawable/advicenumberbackground"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="2."
+            android:textColor="@color/newWhite"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

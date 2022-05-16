@@ -4,21 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background22"
+    android:background="@color/newDark"
     tools:context=".SignUp">
 
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/backgroundsmall" />
+
+    <Button
+        android:id="@+id/register_btnRegister"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/newTeal"
+        android:fontFamily="@font/poppinsbold"
+        android:paddingTop="8dp"
+        android:text="Registruotis"
+        android:textColor="@color/newWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/register_editPassword" />
 
     <EditText
         android:id="@+id/register_editEmail"
         android:layout_width="297dp"
         android:layout_height="42dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite el. paštą"
-        android:backgroundTint="@color/electric_main"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textColorHint="@color/newWhiteDark"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -27,10 +56,11 @@
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/electric_main"
+        android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite slapyvardį"
         android:inputType="textPersonName"
+        android:textColorHint="@color/newWhiteDark"
         app:layout_constraintEnd_toEndOf="@+id/register_editEmail"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/register_editEmail"
@@ -41,10 +71,11 @@
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/electric_main"
+        android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite slaptažodį"
         android:inputType="textPassword"
+        android:textColorHint="@color/newWhiteDark"
         app:layout_constraintEnd_toEndOf="@+id/register_editUsername"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/register_editUsername"
@@ -54,55 +85,18 @@
         android:id="@+id/textView"
         android:layout_width="297dp"
         android:layout_height="56dp"
-        android:layout_marginTop="96dp"
-        android:fontFamily="@font/poppinsbold"
-        android:gravity="center"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppinsmedium"
         android:text="@string/signup"
-        android:textColor="@color/electric_grey"
-        android:textSize="30sp"
+        android:textColor="@color/newWhite"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="jelly_bean" />
 
-    <Button
-        android:id="@+id/register_buttonSignUp"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="64dp"
-        android:text="Registruotis"
-        android:background="@drawable/button_round"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_editPassword" />
 
-    <Button
-        android:id="@+id/register_buttonBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_marginTop="96dp"
-        android:background="@drawable/button_round"
-        android:text="Atgal"
-        app:layout_constraintEnd_toEndOf="@+id/register_editPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/register_editPassword"
-        app:layout_constraintTop_toBottomOf="@+id/register_buttonSignUp" />
-
-    <TextView
-        android:id="@+id/loginText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="@string/loginhere"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_buttonSignUp"
-        tools:targetApi="jelly_bean" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
