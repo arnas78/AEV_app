@@ -23,4 +23,6 @@ class PatarimaiFrag : Fragment() {
         return inflater.inflate(R.layout.fragment_patarimai, container, false)
     }
 
+
+
 }

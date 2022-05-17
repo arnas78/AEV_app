@@ -1,18 +1,29 @@
 package com.example.programele
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
+import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.actionCodeSettings
 
 class Login : AppCompatActivity() {
 
+    var callbackManager = CallbackManager.Factory.create()
     lateinit var loginTextInputEditTextPassword: EditText
     lateinit var loginTextInputEditTextEmail: EditText
     lateinit var signUpText: TextView
@@ -26,7 +37,6 @@ class Login : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-//        textInputEditTextUsername = findViewById(R.id.usernameSignUp)
         loginTextInputEditTextPassword = findViewById(R.id.passwordLogin)
         loginTextInputEditTextEmail = findViewById(R.id.usernameLogin)
         buttonRegister = findViewById(R.id.login_btnRegister)
@@ -42,12 +52,54 @@ class Login : AppCompatActivity() {
         buttonLog.setOnClickListener{
             login(it)
         }
+
+        val loginbutton=findViewById<LoginButton>(R.id.login_button)
+
+        loginbutton.setOnClickListener {
+            if (userLoggedIn()) {
+                auth.signOut()
+            }
+            else {
+                LoginManager.getInstance()
+                    .logInWithReadPermissions(this, listOf("public_profile", "email"))
+            }
+        }
+        // Initialize Facebook Login button
+
+
+
+        LoginManager.getInstance().registerCallback(callbackManager, object :
+            FacebookCallback<LoginResult> {
+            override fun onSuccess(loginResult: LoginResult) {
+                Log.d(TAG, "facebook:onSuccess:$loginResult")
+                handleFacebookAccessToken(loginResult.accessToken)
+            }
+
+            override fun onCancel() {
+                Log.d(TAG, "facebook:onCancel")
+                // ...
+            }
+
+            override fun onError(error: FacebookException) {
+                Log.d(TAG, "facebook:onError", error)
+                // ...
+            }
+        })
+        // ...
+
+//        textInputEditTextUsername = findViewById(R.id.usernameSignUp)
+
 //        login_btnForgotPassword.setOnClickListener{
 //            val intent = Intent(this, ActivityForgotPassword::class.java);
 //            startActivity(intent)
 //
 //        }
     }
+
+    private fun userLoggedIn(): Boolean {
+        return auth.currentUser!=null && !AccessToken.getCurrentAccessToken()!!.isExpired
+    }
+
     fun login(view: View) {
         val email = loginTextInputEditTextEmail.text.toString()
         val password = loginTextInputEditTextPassword.text.toString()
@@ -71,22 +123,40 @@ class Login : AppCompatActivity() {
         }
 
     }
-    private fun buildActionCodeSettings() {
-        // [START auth_build_action_code_settings]
-        val actionCodeSettings = actionCodeSettings {
-            // URL you want to redirect back to. The domain (www.example.com) for this
-            // URL must be whitelisted in the Firebase Console.
-            url = "https://www.example.com/finishSignUp?cartId=1234"
-            // This must be true
-            handleCodeInApp = true
-            setIOSBundleId("com.example.ios")
-            setAndroidPackageName(
-                "com.example.android",
-                true, /* installIfNotAvailable */
-                "12" /* minimumVersion */)
-        }
-        // [END auth_build_action_code_settings]
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        // Pass the activity result back to the Facebook SDK
+        callbackManager.onActivityResult(requestCode, resultCode, data)
     }
+
+    private fun handleFacebookAccessToken(token: AccessToken) {
+        Log.d(TAG, "handleFacebookAccessToken:$token")
+
+        val credential = FacebookAuthProvider.getCredential(token.token)
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "signInWithCredential:success")
+                    startActivity(Intent(this,MainActivity::class.java))
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "signInWithCredential:failure", task.exception)
+                    Toast.makeText(baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+//    public override fun onStart() {
+//        super.onStart()
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        val currentUser = auth.currentUser
+//        updateUI(currentUser)
+//    }
+
 
 
 

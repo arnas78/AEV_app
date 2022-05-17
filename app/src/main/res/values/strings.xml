@@ -83,5 +83,11 @@
     <string name="adviceFirst">Pasikeitus senovines lemputes į LED technologiją, elektros išlaidas apšvietimui galite sumažinti 50–90 %. Tradicinę 60 vatų lemputę pakeitę 10 vatų LED, per metus galite susimažinti elektros sąskaitą net iki 15 eurų.</string>
     <string name="adviceSecond">Prietaisai, veikdami budėjimo režimu nuolat naudoja elektros energiją, todėl kiekvieną mėnesį mokate už nesinaudojimą prietaisais. „Energy Saving Trust“ duomenimis, vien prisimindami iš tinklo išjungti prietaisus, per metus galite sutaupyti iki 35 eurų.</string>
     <string name="adviceThird">Skalbimo mašiną junkite tik tada, kai ji pilna. Pusiau prikrauta ji sunaudoja tiek pat elektros ir karšto vandens kiek pilna. Skalbdami savo drabužius žemesnės temperatūros vandenyje, per metus galite sutaupyti apie 80 eurų.</string>
+
+    <string name="facebook_app_id">576937303644400</string>
+    <string name="fb_login_protocol_scheme">fb576937303644400</string>
+    <string name="facebook_client_token">009717902777d18c39f36802a0d33ec9</string>
+
+
 </resources>
 

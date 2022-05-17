@@ -1,66 +1,76 @@
 package com.example.programele
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.system.Os.close
-import android.view.MenuItem
-import android.widget.Toast
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.android.material.navigation.NavigationView
+import androidx.fragment.app.FragmentTransaction
+import com.google.android.exoplayer2.util.Log
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_main.*
+
+private var name: String? = null
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var toggle : ActionBarDrawerToggle
-
-    lateinit var drawerLayout: DrawerLayout
+    private var name: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
         setContentView(R.layout.activity_main)
+        openFragment()
+        bottomNavigationView.menu.getItem(2).isEnabled = false
 
-        drawerLayout = findViewById(R.id.drawerlayout)
-        val navView: NavigationView = findViewById<NavigationView>(R.id.nav_view)
 
-        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        navView.setNavigationItemSelectedListener{
-
-            it.isChecked = true
-
-            when(it.itemId){
-                R.id.nav_home -> replaceFragment(HomeFrag(), it.title.toString())
-                R.id.nav_settings -> replaceFragment(SettingsFrag(), it.title.toString())
-                R.id.nav_review -> replaceFragment(FeedbackFrag(), it.title.toString())
-                R.id.nav_device -> replaceFragment(DevicesFrag(), it.title.toString())
-                R.id.nav_levels -> replaceFragment(LevelFrag(), it.title.toString())
-
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId){
+                R.id.miHome -> makeCurrentFragment(HomeFrag())
+                R.id.miDevices -> makeCurrentFragment(DevicesFrag())
+                R.id.miProfile -> makeCurrentFragment(PatarimaiFrag())
+                R.id.miSettings -> makeCurrentFragment(SettingsFrag())
             }
             true
         }
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+//        navView.setNavigationItemSelectedListener{
+//
+//            it.isChecked = true
+//
+//            when(it.itemId){
+//                R.id.nav_home -> replaceFragment(HomeFrag(), it.title.toString())
+//                R.id.nav_settings -> replaceFragment(SettingsFrag(), it.title.toString())
+//                R.id.nav_review -> replaceFragment(FeedbackFrag(), it.title.toString())
+//                R.id.nav_device -> replaceFragment(DevicesFrag(), it.title.toString())
+//                R.id.nav_levels -> replaceFragment(LevelFrag(), it.title.toString())
+//
+//            }
+//            true
+//        }
     }
 
-    private fun replaceFragment(fragment: Fragment, title : String){
 
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frameLayout,fragment)
-        fragmentTransaction.commit()
-        drawerLayout.closeDrawers()
-        setTitle(title)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        if (toggle.onOptionsItemSelected(item)) {
-
-            return true
+    private fun makeCurrentFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper, fragment)
+            commit()
         }
-        return super.onOptionsItemSelected(item)
+
+    private fun openFragment() {
+
+        val homeFrag = HomeFrag()
+        val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+//        val data = Bundle()
+//        data.putString("myData", "Hello, $name")
+//        homeFrag.arguments = data
+        fragmentTransaction.replace(R.id.fl_wrapper, homeFrag).commit();
     }
+
+
 }

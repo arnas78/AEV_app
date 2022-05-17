@@ -20,11 +20,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="363dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/backgroundbig"
         app:layout_constraintEnd_toEndOf="@+id/userProfile_changePicture"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="@+id/userProfile_changePicture"
         app:layout_constraintTop_toBottomOf="@+id/userProfile_changePicture" />
 
@@ -91,9 +92,7 @@
 
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="96dp"
         android:background="@drawable/button_round"
         android:elevation="4dp"
         android:fontFamily="@font/poppinsbold"
@@ -103,16 +102,13 @@
         app:backgroundTint="@color/newTeal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/userProfile_editSurname"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/userProfile_btnBack"
         android:layout_width="110dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginBottom="64dp"
         android:background="@drawable/button_round"
         android:elevation="4dp"
         android:fontFamily="@font/poppinsbold"
@@ -120,20 +116,20 @@
         android:textColor="@color/newWhite"
         android:textSize="18dp"
         app:backgroundTint="@color/newTeal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/userProfile_editSurname"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/userProfile_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="44dp"
         android:text="Slapyvardis"
         android:textAppearance="@style/categories_white"
-        app:layout_constraintStart_toStartOf="@+id/userProfile_changePicture"
-        app:layout_constraintTop_toBottomOf="@+id/userProfile_changePicture" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/userProfile_editUsername"
