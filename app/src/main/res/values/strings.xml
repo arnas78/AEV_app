@@ -77,7 +77,7 @@
     <string name="add_devices">Įtraukti prietaisą</string>
     <string name="choose_group">Pasirinkti vartojimo klasę</string>
     <string name="ivestiprietaisa">Įveskite prietaiso pavadinimą</string>
-    <string name="energija">Įveskite energijos kiekį</string>
+    <string name="energija">Suvartojama energija (kWh)</string>
     <string name="atsakymas">Įrašymo atsakymas bus pateiktas čia</string>
     <string name="atgal_pagrindinis">Grįžti atgal į pagrindinį</string>
     <string name="adviceFirst">Pasikeitus senovines lemputes į LED technologiją, elektros išlaidas apšvietimui galite sumažinti 50–90 %. Tradicinę 60 vatų lemputę pakeitę 10 vatų LED, per metus galite susimažinti elektros sąskaitą net iki 15 eurų.</string>

@@ -27,8 +27,6 @@ private var myStr: String? = null
 
 private var tvMyText: TextView? = null
 
-
-
 class HomeFrag : Fragment() {
 
     private lateinit var auth: FirebaseAuth
@@ -44,7 +42,6 @@ class HomeFrag : Fragment() {
         }
 
     }
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -66,7 +63,6 @@ class HomeFrag : Fragment() {
                 if (document != null) {
 
                     name = document.getString("username").toString()
-                    userHome_userGreeting.text = "Sveiki, " + auth.currentUser?.displayName
                     Log.d(ContentValues.TAG, "DocumentSnapshot data: ${document.data}")
                 } else {
                     Log.d(ContentValues.TAG, "No such document")
@@ -84,17 +80,15 @@ class HomeFrag : Fragment() {
         storageReference = storage.getReference()
         fAuth = FirebaseAuth.getInstance()
 
+        userHome_userGreeting.text = "Sveiki, " + auth.currentUser?.displayName
         val profileRef: StorageReference =
             storageReference.child("users/" + fAuth.currentUser?.uid + "/profile.jpg")
 
-
-
-
         Picasso.get().load(auth.currentUser?.photoUrl).into(userProfile_profilePicture)
 
-//        profileRef.downloadUrl.addOnSuccessListener { uri ->
-//            Picasso.get().load(uri).into(userProfile_profilePicture)
-//        }
+        profileRef.downloadUrl.addOnSuccessListener { uri ->
+            Picasso.get().load(uri).into(userProfile_profilePicture)
+        }
 
     }
 }

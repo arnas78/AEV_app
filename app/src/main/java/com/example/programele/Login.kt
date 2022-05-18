@@ -19,7 +19,7 @@ import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.actionCodeSettings
+
 
 class Login : AppCompatActivity() {
 
@@ -61,7 +61,7 @@ class Login : AppCompatActivity() {
             }
             else {
                 LoginManager.getInstance()
-                    .logInWithReadPermissions(this, listOf("public_profile", "email"))
+                    .logInWithReadPermissions(this, listOf("public_profile"))
             }
         }
         // Initialize Facebook Login button
@@ -154,7 +154,13 @@ class Login : AppCompatActivity() {
 //        super.onStart()
 //        // Check if user is signed in (non-null) and update UI accordingly.
 //        val currentUser = auth.currentUser
-//        updateUI(currentUser)
+//        if (currentUser != null) {
+//            for (userInfo in currentUser.providerData) {
+//                if (userInfo.providerId == "facebook.com") {
+//                    Log.d("TAG", "User is signed in with Facebook")
+//                }
+//            }
+//        }
 //    }
 
 

@@ -2,6 +2,7 @@ package com.example.programele
 
 import android.content.ContentValues
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -33,10 +34,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.miHome -> makeCurrentFragment(HomeFrag())
                 R.id.miDevices -> makeCurrentFragment(DevicesFrag())
                 R.id.miProfile -> makeCurrentFragment(PatarimaiFrag())
+                R.id.fab -> makeCurrentFragment(AddDeviceFrag())
                 R.id.miSettings -> makeCurrentFragment(SettingsFrag())
             }
             true
         }
+
+        fab.setOnClickListener{
+            makeCurrentFragment(AddDeviceFrag())
+        }
+
+
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 //        navView.setNavigationItemSelectedListener{
