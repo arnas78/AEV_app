@@ -20,49 +20,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-
         setContentView(R.layout.activity_main)
         openFragment()
         bottomNavigationView.menu.getItem(2).isEnabled = false
-
-
-
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId){
                 R.id.miHome -> makeCurrentFragment(HomeFrag())
                 R.id.miDevices -> makeCurrentFragment(DevicesFrag())
                 R.id.miProfile -> makeCurrentFragment(PatarimaiFrag())
-                R.id.fab -> makeCurrentFragment(AddDeviceFrag())
                 R.id.miSettings -> makeCurrentFragment(SettingsFrag())
             }
             true
         }
 
-        fab.setOnClickListener{
+        fab.setOnClickListener {
             makeCurrentFragment(AddDeviceFrag())
         }
 
-
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-//        navView.setNavigationItemSelectedListener{
-//
-//            it.isChecked = true
-//
-//            when(it.itemId){
-//                R.id.nav_home -> replaceFragment(HomeFrag(), it.title.toString())
-//                R.id.nav_settings -> replaceFragment(SettingsFrag(), it.title.toString())
-//                R.id.nav_review -> replaceFragment(FeedbackFrag(), it.title.toString())
-//                R.id.nav_device -> replaceFragment(DevicesFrag(), it.title.toString())
-//                R.id.nav_levels -> replaceFragment(LevelFrag(), it.title.toString())
-//
-//            }
-//            true
-//        }
     }
-
 
     private fun makeCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {

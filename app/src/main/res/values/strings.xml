@@ -88,6 +88,20 @@
     <string name="fb_login_protocol_scheme">fb576937303644400</string>
     <string name="facebook_client_token">009717902777d18c39f36802a0d33ec9</string>
 
+    <string-array name="deviceEfficiency">
+        <item>Nesu tikras</item>
+        <item>A+++</item>
+        <item>A++</item>
+        <item>A+</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
 
+    </string-array>
+    
 </resources>
 

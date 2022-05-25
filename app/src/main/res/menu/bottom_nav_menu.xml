@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/miHome"
-        android:title="Home"
+        android:title="Pagrindinis"
         android:icon="@drawable/ic_baseline_home_24"/>
 
     <item android:id="@+id/miDevices"
-        android:title="Devices"
+        android:title="Įrenginiai"
         android:icon="@drawable/ic_plug"/>
 
     <item android:id="@+id/placeholder"
@@ -14,10 +14,10 @@
         />
 
     <item android:id="@+id/miProfile"
-        android:title="Profile"
+        android:title="Profilis"
         android:icon="@drawable/ic_person"/>
 
     <item android:id="@+id/miSettings"
-        android:title="Settings"
+        android:title="Nustatymai"
         android:icon="@drawable/ic_baseline_settings_24"/>
 </menu>

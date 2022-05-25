@@ -27,6 +27,7 @@
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.3045" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3045" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/drawable/ic_person.xml" value="0.2475" />
+        <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/drawable/kwh_image.xml" value="0.5265" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/activity_add_device.xml" value="0.33" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/activity_devices.xml" value="0.416213768115942" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/activity_home.xml" value="0.14994934143870314" />
@@ -36,10 +37,11 @@
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/activity_main2.xml" value="0.416213768115942" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/activity_settings.xml" value="0.24048913043478262" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/dropdown_item.xml" value="0.39947916666666666" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_addDevice.xml" value="0.1" />
-        <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_add_device.xml" value="0.33" />
+        <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_add_device.xml" value="0.67" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_blank.xml" value="0.3645833333333333" />
-        <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_devices.xml" value="0.39356884057971014" />
+        <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_devices.xml" value="0.22" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_feedback.xml" value="0.4" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/PC/Desktop/Programele/app/src/main/res/layout/fragment_level.xml" value="0.33" />
