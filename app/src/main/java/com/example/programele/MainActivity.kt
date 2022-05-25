@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.exoplayer2.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_devices.*
 
 private var name: String? = null
 
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener {
             makeCurrentFragment(AddDeviceFrag())
         }
+
+
 
     }
 

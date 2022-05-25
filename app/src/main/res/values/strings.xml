@@ -100,7 +100,19 @@
         <item>E</item>
         <item>F</item>
         <item>G</item>
+    </string-array>
 
+    <string-array name="deviceType">
+        <item>Lemputė</item>
+        <item>Šaldytuvas</item>
+        <item>Šaldiklis</item>
+        <item>Orkaitė</item>
+        <item>Mikrobangų krosnelė</item>
+        <item>Arbatinukas</item>
+        <item>Televizorius</item>
+        <item>Skalbimo mašina</item>
+        <item>Kondicionierius</item>
+        <item>Kita</item>
     </string-array>
     
 </resources>

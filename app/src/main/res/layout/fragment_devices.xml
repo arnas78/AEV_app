@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/newDark"
-    tools:context=".DevicesFrag">
+    tools:context=".DevicesFrag"
+    android:id="@+id/devicesLayout">
 
     <Button
-        android:id="@+id/login_btnLogin2"
+        android:id="@+id/devices_addDevice"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="47dp"
         android:layout_marginTop="140dp"
-
         android:background="@drawable/button_round"
         android:backgroundTint="@color/newTeal"
         android:fontFamily="@font/poppinsbold"
@@ -41,5 +41,32 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="jelly_bean" />
 
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

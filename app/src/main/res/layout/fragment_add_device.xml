@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/newDark"
-    tools:context=".AddDeviceFrag">
+    tools:context=".AddDeviceFrag"
+    android:id="@+id/fl_wrapper2">
 
     <TextView
         android:id="@+id/add_title"
@@ -25,20 +26,35 @@
     <ImageView
         android:id="@+id/add_background"
         android:layout_width="363dp"
-        android:layout_height="380dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="@+id/add_title"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="@+id/add_title"
         app:layout_constraintTop_toBottomOf="@+id/add_title"
         app:srcCompat="@drawable/backgroundbig" />
+
+    <TextView
+        android:id="@+id/add_chooseClass2"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Pasirinkite prietaiso tipą"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <Button
         android:id="@+id/add_btnSave"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/button_round"
         android:backgroundTint="@color/newTeal"
         android:fontFamily="@font/poppinsbold"
@@ -46,22 +62,23 @@
         android:textAllCaps="false"
         android:textColor="@color/newWhite"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/add_background"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/add_background"
+        app:layout_constraintTop_toBottomOf="@+id/add_background" />
 
     <TextView
         android:id="@+id/add_chooseClass"
         android:layout_width="277dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinsmedium"
         android:gravity="center"
         android:text="@string/choose_group"
         android:textColor="@color/newWhite"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/add_editAmount"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/add_editAmount"
         app:layout_constraintTop_toBottomOf="@+id/add_editAmount" />
 
@@ -106,7 +123,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:boxBackgroundColor="@color/newLight"
         app:endIconTint="@color/newWhite"
         app:layout_constraintEnd_toEndOf="@+id/add_chooseClass"
@@ -124,7 +141,33 @@
             android:inputType="none"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
-            android:text="Pasirinkite"
+            android:text="Rinktis klasę"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/newLight"
+        app:endIconTint="@color/newWhite"
+        app:layout_constraintEnd_toEndOf="@+id/add_chooseClass2"
+        app:layout_constraintStart_toStartOf="@+id/add_chooseClass2"
+        app:layout_constraintTop_toBottomOf="@+id/add_chooseClass2"
+        app:startIconDrawable="@drawable/ic_baseline_devices_24"
+        app:startIconTint="@color/newWhite">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Rinktis tipą"
             android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
