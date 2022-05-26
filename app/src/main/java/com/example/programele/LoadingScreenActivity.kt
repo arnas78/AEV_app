@@ -12,11 +12,10 @@ class LoadingScreenActivity : AppCompatActivity() {
 
 //        supportActionBar?.hide()
 //
-//        Handler().postDelayed({
-//            val intent = Intent(this@LoadingScreenActivity, Login::class.java)
-//            startActivity(intent)
-//            finish()
-//        }, 3000)
+        Handler().postDelayed({
+            val intent = Intent(this@LoadingScreenActivity, Login::class.java)
+            startActivity(intent)
+        }, 3000)
 
     }
 }

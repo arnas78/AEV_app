@@ -3,7 +3,7 @@
     <style name="Theme.Programele" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/newTeal</item>
-        <item name="colorPrimaryVariant">@color/newWhite</item>
+        <item name="colorPrimaryVariant">@color/newDark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

@@ -3,6 +3,7 @@ package com.example.programele
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
@@ -63,6 +64,7 @@ class ActionFrag : Fragment() {
                     devicesArr.add(dbName)
                     devicePowerArr.add(document.get("amount").toString())
                 }
+
             }
             .addOnFailureListener { exception ->
                 Log.w(ContentValues.TAG, "Error getting documents: ", exception)
@@ -92,7 +94,7 @@ class ActionFrag : Fragment() {
         })
 
         action_btnSave.setOnClickListener {
-            if (!deviceSelection.equals("") && !devicePowerArr.equals("")) {
+            if (deviceSelection != "" && timeSelection != "") {
                 val docName = "" + System.currentTimeMillis()
                 val activity: Activity? = activity
                 val device = hashMapOf(
@@ -100,14 +102,16 @@ class ActionFrag : Fragment() {
                     "power" to devicePowerSelection,
                     "owner" to authUser?.uid.toString()
                 )
+
+                Log.d(TAG,"laikas $timeSelection")
                 // Add a new document with an auth generated ID
                 db.collection("actions").document(docName).set(device)
                 Toast.makeText(activity, "Sėkmingai pridėjote veiklą!", Toast.LENGTH_SHORT).show()
             }
-            else if (!deviceSelection.equals("")){
+            else if (deviceSelection.equals("")){
                 Toast.makeText(activity, "Pasirinkite prietaisą", Toast.LENGTH_SHORT).show()
             }
-            else if (!timeSelection.equals("")){
+            else if (timeSelection.equals("")){
                 Toast.makeText(activity, "Pasirinkite laiką, kiek naudojote prietaisą", Toast.LENGTH_SHORT).show()
             }
         }

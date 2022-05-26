@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.isEmpty
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
@@ -112,6 +113,10 @@ class DevicesFrag : Fragment() {
                                 when (which) {
                                     DialogInterface.BUTTON_POSITIVE -> {
                                         container.removeView(view)
+                                        if (container.isEmpty()){
+                                            val view2: View = layoutInflater.inflate(R.layout.emptytext, null)
+                                            container.addView(view2)
+                                        }
                                         db.collection("devices").document(document.id)
                                             .delete()
                                             .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!") }
@@ -128,7 +133,14 @@ class DevicesFrag : Fragment() {
                     }
                     container.addView(view)
 
+
                 }
+
+                if (container.isEmpty()){
+                    val view2: View = layoutInflater.inflate(R.layout.emptytext, null)
+                    container.addView(view2)
+                }
+
             }
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents: ", exception)

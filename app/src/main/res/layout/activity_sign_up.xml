@@ -10,22 +10,58 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.373"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/backgroundsmall" />
+        app:srcCompat="@drawable/backgroundbig" />
+
+    <TextView
+        android:id="@+id/userProfile_name4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Slaptažodis"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/register_editUsername"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/register_editUsername"
+        app:layout_constraintTop_toBottomOf="@+id/register_editUsername" />
+
+    <TextView
+        android:id="@+id/userProfile_name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Slapyvardis"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/register_editEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/register_editEmail"
+        app:layout_constraintTop_toBottomOf="@+id/register_editEmail" />
+
+    <TextView
+        android:id="@+id/userProfile_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="El. paštas"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/register_btnRegister"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="172dp"
         android:layout_height="47dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/button_round"
         android:backgroundTint="@color/newTeal"
         android:fontFamily="@font/poppinsbold"
@@ -34,52 +70,54 @@
         android:textColor="@color/newWhite"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/register_editPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/register_editEmail"
         android:layout_width="297dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite el. paštą"
         android:inputType="textPersonName"
         android:textColorHint="@color/newWhiteDark"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_name2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_name2"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_name2" />
 
     <EditText
         android:id="@+id/register_editUsername"
         android:layout_width="297dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite slapyvardį"
         android:inputType="textPersonName"
         android:textColorHint="@color/newWhiteDark"
-        app:layout_constraintEnd_toEndOf="@+id/register_editEmail"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_name3"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/register_editEmail"
-        app:layout_constraintTop_toBottomOf="@+id/register_editEmail" />
+        app:layout_constraintStart_toStartOf="@+id/userProfile_name3"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_name3" />
 
     <EditText
         android:id="@+id/register_editPassword"
         android:layout_width="297dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite slaptažodį"
         android:inputType="textPassword"
         android:textColorHint="@color/newWhiteDark"
-        app:layout_constraintEnd_toEndOf="@+id/register_editUsername"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_name4"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/register_editUsername"
-        app:layout_constraintTop_toBottomOf="@+id/register_editUsername" />
+        app:layout_constraintStart_toStartOf="@+id/userProfile_name4"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_name4" />
 
     <TextView
         android:id="@+id/textView"
@@ -90,9 +128,9 @@
         android:text="@string/signup"
         android:textColor="@color/newWhite"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="jelly_bean" />
 

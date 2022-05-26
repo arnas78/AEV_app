@@ -23,9 +23,8 @@
         android:layout_height="216dp"
 
         android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/backgroundsmall" />
 
@@ -53,11 +52,9 @@
         android:text="Registruotis"
         android:textColor="@color/newWhite"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_btnLogin"
         app:layout_constraintStart_toStartOf="@+id/login_btnLogin"
-        app:layout_constraintTop_toBottomOf="@+id/login_btnLogin"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/login_btnLogin" />
 
     <TextView
         android:id="@+id/textView"
@@ -68,9 +65,9 @@
         android:text="@string/login"
         android:textColor="@color/newWhite"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.403"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -132,7 +129,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="172dp"
         android:layout_height="47dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/button_round"
         android:backgroundTint="@color/newTeal"
         android:fontFamily="@font/poppinsbold"

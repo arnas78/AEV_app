@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeedbackFrag">
+    android:background="@color/newDark"
+    tools:context=".FeedbackFrag"
+    android:id="@+id/actionLayout">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/feedback_title"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Atsiliepimai"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        />
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Rašyti atsiliepimą"
+        android:textColor="@color/newWhite"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_review"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/feedback_review"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="jelly_bean" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/feedback_review"
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/backgroundbig"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="start"
+        android:hint="Jūsų atsiliepimas"
+        android:padding="24dp"
+        android:textColor="@color/newWhite"
+        android:textColorHint="@color/newWhiteDark"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_title" />
+
+
+    <Button
+        android:id="@+id/feedback_btnSend"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/newTeal"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Siųsti atsiliepimą"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_review"
+        app:layout_constraintStart_toStartOf="@+id/feedback_review"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_review" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
