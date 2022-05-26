@@ -1,18 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LevelFrag">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/newDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LevelFrag">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370dp"
+        android:layout_height="343dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/backgroundbig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_changePicture" />
+
+    <EditText
+        android:id="@+id/userProfile_editEmail"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/newTeal"
+        android:hint="Įveskite el. paštą"
+        android:paddingStart="8dp"
+        android:textColor="@color/newWhite"
+        android:textColorHint="@color/newWhiteDark"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_email"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_email"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_email"
+        tools:ignore="RtlSymmetry" />
 
     <TextView
+        android:id="@+id/userProfile_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Mano lygis"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        />
+        android:layout_marginTop="24dp"
+        android:text="El. paštas"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_editSurname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_editSurname"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_editSurname" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/userProfile_editSurname"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/newTeal"
+        android:hint="Įveskite pavardę"
+        android:paddingStart="8dp"
+        android:textColor="@color/newWhite"
+        android:textColorHint="@color/newWhiteDark"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_surname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_surname"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_surname"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/userProfile_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pavardė"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_editName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_editName"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_editName" />
+
+    <EditText
+        android:id="@+id/userProfile_editName"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/newTeal"
+        android:hint="Įveskite vardą"
+        android:paddingStart="8dp"
+        android:textColor="@color/newWhite"
+        android:textColorHint="@color/newWhiteDark"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userProfile_name"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_name"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/userProfile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="Vardas"
+        android:textAppearance="@style/categories_white"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/userProfile_btnSave"
+
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/button_round"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Išsaugoti"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:backgroundTint="@color/newTeal"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfile_profilePicture"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/user_image"
+            app:civ_border_color="@color/newTeal"
+            app:civ_border_width="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/userProfile_changePicture"
+            android:layout_width="300dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Keisti profilio nuotrauką"
+            android:textAppearance="@style/categories_white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/userProfile_profilePicture"
+            app:layout_constraintStart_toStartOf="@+id/userProfile_profilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/userProfile_profilePicture" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

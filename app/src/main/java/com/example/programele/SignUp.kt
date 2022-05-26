@@ -64,7 +64,9 @@ class SignUp : AppCompatActivity() {
                     val user = hashMapOf(
                         "username" to username,
                         "email" to email,
-                        "password" to password
+                        "password" to password,
+                        "name" to "",
+                        "surname" to ""
                     )
 
                     // Add a new document with an auth generated ID

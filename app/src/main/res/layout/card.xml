@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -12,7 +13,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="32dp"
+            android:layout_margin="16dp"
 
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
@@ -21,7 +22,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/newLight"
-                android:padding="10dp">
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/energyClassText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Klasė:"
+                    android:textColor="@color/newWhite"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/efficiencyText"
+                    app:layout_constraintTop_toBottomOf="@+id/efficiencyText" />
 
                 <TextView
                     android:id="@+id/name"
@@ -32,50 +45,73 @@
                     android:text="Pavadinimas"
                     android:textColor="@color/newWhite"
                     android:textFontWeight="1000"
-                    android:textSize="32dp"
+                    android:textSize="24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/efficiencyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Galia:"
+                    android:textColor="@color/newWhite"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@+id/name" />
 
                 <TextView
                     android:id="@+id/efficiency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
                     android:text="Efektyvumas"
                     android:textColor="@color/newWhite"
-                    android:textSize="24dp"
-                    app:layout_constraintStart_toStartOf="@+id/name"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/efficiencyText"
                     app:layout_constraintTop_toBottomOf="@+id/name" />
-
-                <TextView
-                    android:id="@+id/energyClass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:text="Klasė"
-                    android:textColor="@color/newWhite"
-
-                    android:textSize="24dp"
-                    app:layout_constraintEnd_toEndOf="@+id/efficiency"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/efficiency"
-                    app:layout_constraintTop_toBottomOf="@+id/efficiency" />
 
                 <TextView
                     android:id="@+id/deviceType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
                     android:layout_marginBottom="12dp"
                     android:text="Tipas"
                     android:textColor="@color/newWhite"
-                    android:textSize="24dp"
+                    android:textSize="18dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/energyClass"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/energyClass"
-                    app:layout_constraintTop_toBottomOf="@+id/energyClass" />
+                    app:layout_constraintStart_toEndOf="@+id/deviceTypeText"
+                    app:layout_constraintTop_toBottomOf="@+id/energyClass"
+                    app:layout_constraintVertical_bias="0.833" />
+
+                <TextView
+                    android:id="@+id/deviceTypeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Tipas:"
+                    android:textColor="@color/newWhite"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/energyClassText"
+                    app:layout_constraintTop_toBottomOf="@+id/energyClassText" />
+
+                <TextView
+                    android:id="@+id/energyClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+
+                    android:text="Klasė"
+                    android:textColor="@color/newWhite"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/energyClassText"
+                    app:layout_constraintTop_toBottomOf="@+id/efficiency" />
 
                 <ImageView
                     android:id="@+id/delete"

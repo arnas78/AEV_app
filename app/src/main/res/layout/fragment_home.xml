@@ -1,28 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:scrollbarThumbVertical="@color/newTeal"
+    android:orientation="vertical">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".HomeFrag"
     android:background="@color/newDark">
 
 
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="24dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:tint="@color/newWhite"
+        app:layout_constraintEnd_toEndOf="@+id/userProfile_profilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_profilePicture" />
+
+    <ImageView
+        android:id="@+id/action_background4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_background2"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:srcCompat="@drawable/backgroundsquare" />
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/userProfile_profilePicture"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="36dp"
-            android:src="@drawable/user_image"
-            app:civ_border_color="@color/newTeal"
-            app:civ_border_width="2dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/home_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Kiekis"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="@+id/imageView20"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_trending_up_24"
+        app:layout_constraintEnd_toEndOf="@+id/action_background4"
+        app:layout_constraintStart_toStartOf="@+id/action_background4"
+        app:layout_constraintTop_toTopOf="@+id/action_background4"
+        app:tint="@color/newTeal" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Progresas"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_background4"
+        app:layout_constraintStart_toStartOf="@+id/action_background4"
+        app:layout_constraintTop_toBottomOf="@+id/action_background2" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Jūsų vidurkis"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_background3"
+        app:layout_constraintStart_toStartOf="@+id/action_background3"
+        app:layout_constraintTop_toBottomOf="@+id/action_background2" />
+
+    <ImageView
+        android:id="@+id/action_background3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/action_background2"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="@drawable/backgroundsquare" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Kainos skirtumas nuo vakar"
+        android:textColor="@color/newWhiteDark"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_progress"
+        app:layout_constraintStart_toStartOf="@+id/home_progress"
+        app:layout_constraintTop_toBottomOf="@+id/home_progress" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_adjust_24"
+        app:layout_constraintEnd_toEndOf="@+id/action_background3"
+        app:layout_constraintStart_toStartOf="@+id/action_background3"
+        app:layout_constraintTop_toTopOf="@+id/action_background3"
+        app:tint="@color/newTeal" />
+
+    <ImageView
+        android:id="@+id/action_background2"
+        android:layout_width="361dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/backgroundnew" />
+
+    <TextView
+        android:id="@+id/home_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Kiekis"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Išnaudotas dienos limitas"
+        android:textColor="@color/newWhiteDark"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_limit"
+        app:layout_constraintStart_toStartOf="@+id/home_limit"
+        app:layout_constraintTop_toBottomOf="@+id/home_limit" />
+
+    <TextView
+        android:id="@+id/home_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Kiekis"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="95dp"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Prietaisų naudojimo laikas"
+        android:textColor="@color/newWhiteDark"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_time"
+        app:layout_constraintStart_toStartOf="@+id/home_time"
+        app:layout_constraintTop_toBottomOf="@+id/home_time" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="89dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Prietaisų naudojimo kaina"
+        android:textColor="@color/newWhiteDark"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_price"
+        app:layout_constraintStart_toStartOf="@+id/home_price"
+        app:layout_constraintTop_toBottomOf="@+id/home_price" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_access_time_24"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/action_background2"
+        app:tint="@color/newTeal" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_percent_24"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/action_background2"
+        app:tint="@color/base_orange" />
+
+    <TextView
+        android:id="@+id/home_textAdvice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+
+        android:layout_marginBottom="90dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Kaip sutaupyti?"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/action_background4"
+        app:layout_constraintStart_toStartOf="@+id/action_background3"
+        app:layout_constraintTop_toBottomOf="@+id/action_background3" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile_profilePicture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/user_image"
+        app:civ_border_color="@color/newTeal"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_background2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="115dp"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Vidutinė dienos kaina"
+        android:textColor="@color/newWhiteDark"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/home_average"
+        app:layout_constraintStart_toStartOf="@+id/home_average"
+        app:layout_constraintTop_toBottomOf="@+id/home_average" />
 
 <!--        <ImageView-->
 <!--            android:id="@+id/imageView11"-->
@@ -50,29 +296,97 @@
 <!--            app:layout_constraintTop_toBottomOf="@+id/userHome_userGreeting" />-->
 
 
-    <FrameLayout
-        android:id="@+id/fl_home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_anchorGravity="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+    <TextView
+        android:id="@+id/userHome_userGreeting"
+        android:layout_width="220dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textAppearance="@style/categories"
+        android:textColor="@color/newWhite"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@+id/action_background2"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/userHome_userGreeting"
-            android:layout_width="220dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="36dp"
-            android:fontFamily="@font/poppinsbold"
-            android:textAppearance="@style/categories"
-            android:textColor="@color/newWhite"
-            android:textSize="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Jūsų duomenys"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/action_background2"
+        app:layout_constraintTop_toBottomOf="@+id/userHome_userGreeting" />
+
+    <TextView
+        android:id="@+id/home_currentDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Diena"
 
 
-    </FrameLayout>
+        android:textColor="@color/newWhiteDark"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/userHome_userGreeting" />
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_attach_money_24"
+        app:layout_constraintStart_toStartOf="@+id/action_background2"
+        app:layout_constraintTop_toTopOf="@+id/action_background2"
+        app:tint="@color/base_green" />
+
+    <TextView
+        android:id="@+id/home_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Kiekis"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="24dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:tint="@color/newWhite"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/userProfile_profilePicture" />
+
+    <TextView
+        android:id="@+id/home_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Kiekis"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

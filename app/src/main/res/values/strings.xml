@@ -114,6 +114,58 @@
         <item>Kondicionierius</item>
         <item>Kita</item>
     </string-array>
-    
+
+    <string-array name="time">
+        <item>Iki 30 minučių</item>
+        <item>1 valanda</item>
+        <item>1 valanda 30 minučių</item>
+        <item>2 valandos</item>
+        <item>2 valandos 30 minučių</item>
+        <item>3 valandos</item>
+        <item>3 valandos 30 minučių</item>
+        <item>4 valandos</item>
+        <item>4 valandos 30 minučių</item>
+        <item>5 valandos</item>
+        <item>5 valandos 30 minučių</item>
+        <item>6 valandos</item>
+        <item>6 valandos 30 minučių</item>
+        <item>7 valandos</item>
+        <item>7 valandos 30 minučių</item>
+        <item>8 valandos</item>
+        <item>8 valandos 30 minučių</item>
+        <item>9 valandos</item>
+        <item>9 valandos 30 minučių</item>
+        <item>10 valandų</item>
+        <item>10 valandų 30 minučių</item>
+        <item>11 valandų</item>
+        <item>11 valandų 30 minučių</item>
+        <item>12 valandų</item>
+        <item>12 valandų 30 minučių</item>
+        <item>13 valandų</item>
+        <item>13 valandų 30 minučių</item>
+        <item>14 valandų</item>
+        <item>14 valandų 30 minučių</item>
+        <item>15 valandų</item>
+        <item>15 valandų 30 minučių</item>
+        <item>16 valandų</item>
+        <item>16 valandų 30 minučių</item>
+        <item>17 valandų</item>
+        <item>17 valandų 30 minučių</item>
+        <item>18 valandų</item>
+        <item>18 valandų 30 minučių</item>
+        <item>19 valandų</item>
+        <item>19 valandų 30 minučių</item>
+        <item>20 valandų</item>
+        <item>20 valandų 30 minučių</item>
+        <item>21 valanda</item>
+        <item>21 valanda 30 minučių</item>
+        <item>22 valandos</item>
+        <item>22 valandos 30 minučių</item>
+        <item>23 valandos</item>
+        <item>23 valandos 30 minučių</item>
+        <item>24 valandos</item>
+
+    </string-array>
+
 </resources>
 

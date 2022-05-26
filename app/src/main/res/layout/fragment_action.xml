@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newDark"
+    tools:context=".ActionFrag"
+    android:id="@+id/actionLayout">
+
+    <TextView
+        android:id="@+id/add_title"
+        android:layout_width="297dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Nauja veikla"
+        android:textColor="@color/newWhite"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="jelly_bean" />
+
+    <ImageView
+        android:id="@+id/action_background"
+        android:layout_width="363dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/add_title"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="@+id/add_title"
+        app:layout_constraintTop_toBottomOf="@+id/add_title"
+        app:srcCompat="@drawable/backgroundsmall" />
+
+
+    <Button
+        android:id="@+id/action_btnSave"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/newTeal"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Pridėti veiklą"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_background"
+        app:layout_constraintStart_toStartOf="@+id/action_background"
+        app:layout_constraintTop_toBottomOf="@+id/action_background" />
+
+
+    <TextView
+        android:id="@+id/add_chooseClass"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Pasirinkite prietaisą"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_background"
+        app:layout_constraintStart_toStartOf="@+id/action_background"
+        app:layout_constraintTop_toTopOf="@+id/action_background" />
+
+    <TextView
+        android:id="@+id/add_chooseClass3"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Pasirinkite naudojimo laiką"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/action_deviceTextInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/action_deviceTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/action_deviceTextInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/action_timeTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/newLight"
+        app:endIconTint="@color/newWhite"
+        app:layout_constraintEnd_toEndOf="@+id/add_chooseClass3"
+        app:layout_constraintStart_toStartOf="@+id/add_chooseClass3"
+        app:layout_constraintTop_toBottomOf="@+id/add_chooseClass3"
+        app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+        app:startIconTint="@color/newWhite">
+
+        <AutoCompleteTextView
+            android:id="@+id/action_timeAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Rinktis laiko kiekį"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/action_deviceTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:boxBackgroundColor="@color/newLight"
+        app:endIconTint="@color/newWhite"
+        app:layout_constraintEnd_toEndOf="@+id/add_chooseClass"
+        app:layout_constraintStart_toStartOf="@+id/add_chooseClass"
+        app:layout_constraintTop_toBottomOf="@+id/add_chooseClass"
+        app:startIconDrawable="@drawable/ic_plug"
+        app:startIconTint="@color/newWhite">
+
+        <AutoCompleteTextView
+            android:id="@+id/action_deviceAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Rinktis prietaisą"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

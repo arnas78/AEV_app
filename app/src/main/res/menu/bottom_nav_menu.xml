@@ -10,7 +10,8 @@
         android:icon="@drawable/ic_plug"/>
 
     <item android:id="@+id/placeholder"
-        android:title=""
+        android:title="Veikla"
+        android:icon="@drawable/ic_baseline_add_circle_outline_24"
         />
 
     <item android:id="@+id/miProfile"

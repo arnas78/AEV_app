@@ -4,7 +4,6 @@ package com.example.programele
 
 
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.ContentValues
 import android.content.ContentValues.TAG
@@ -14,7 +13,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
@@ -88,12 +89,45 @@ class DevicesFrag : Fragment() {
                 for (document in documents) {
                     Log.d(TAG, "${document.id} => ${document.data}")
                     val dbName = document.get("name").toString()
-                    val dbAmount = document.get("amount").toString()
+                    val dbAmount = document.get("amount").toString() + " W"
                     val dbClass = document.get("class").toString()
                     val dbType = document.get("type").toString()
 
-                    addCard(dbName, dbAmount, dbClass, dbType)
-//                    Log.d(TAG, "KIEKIS" + document.get("amount"))
+                    val view: View = layoutInflater.inflate(R.layout.card, null)
+                    val nameView = view.findViewById<TextView>(R.id.name)
+                    val amountView = view.findViewById<TextView>(R.id.efficiency)
+                    val classView = view.findViewById<TextView>(R.id.energyClass)
+                    val typeView = view.findViewById<TextView>(R.id.deviceType)
+                    val delete = view.findViewById<ImageView>(R.id.delete)
+                    nameView.text = dbName
+                    amountView.text = dbAmount
+                    classView.text = dbClass
+                    typeView.text = dbType
+
+                    delete.setOnClickListener {
+
+
+                        val dialogClickListener =
+                            DialogInterface.OnClickListener { dialog, which ->
+                                when (which) {
+                                    DialogInterface.BUTTON_POSITIVE -> {
+                                        container.removeView(view)
+                                        db.collection("devices").document(document.id)
+                                            .delete()
+                                            .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!") }
+                                            .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
+                                    }
+                                    DialogInterface.BUTTON_NEGATIVE -> {}
+                                }
+                            }
+
+                        val builder = AlertDialog.Builder(context)
+                        builder.setMessage("Ar tikrai norite panaikinti prietaisą?")
+                            .setPositiveButton("Taip", dialogClickListener)
+                            .setNegativeButton("Ne", dialogClickListener).show()
+                    }
+                    container.addView(view)
+
                 }
             }
             .addOnFailureListener { exception ->
@@ -137,7 +171,10 @@ class DevicesFrag : Fragment() {
         classView.text = effClass
         typeView.text = devType
 
-        delete.setOnClickListener { container.removeView(view) }
+        delete.setOnClickListener {
+            container.removeView(view)
+
+        }
         container.addView(view)
     }
 

@@ -8,52 +8,44 @@
     tools:context=".DevicesFrag"
     android:id="@+id/devicesLayout">
 
+
     <Button
         android:id="@+id/devices_addDevice"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="47dp"
-        android:layout_marginTop="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="95dp"
         android:background="@drawable/button_round"
         android:backgroundTint="@color/newTeal"
         android:fontFamily="@font/poppinsbold"
         android:text="Naujas įrenginys"
         android:textAllCaps="false"
         android:textColor="@color/newWhite"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="297dp"
         android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="48dp"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/poppinsbold"
         android:text="Jūsų įrenginiai"
         android:textColor="@color/newWhite"
-        android:textSize="24dp"
+        android:textSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="jelly_bean" />
-
-    <Button
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_marginBottom="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="180dp"
         android:scrollbars="none">
 
         <LinearLayout

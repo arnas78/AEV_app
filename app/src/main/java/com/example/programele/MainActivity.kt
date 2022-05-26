@@ -23,23 +23,17 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         openFragment()
-        bottomNavigationView.menu.getItem(2).isEnabled = false
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId){
                 R.id.miHome -> makeCurrentFragment(HomeFrag())
                 R.id.miDevices -> makeCurrentFragment(DevicesFrag())
-                R.id.miProfile -> makeCurrentFragment(PatarimaiFrag())
+                R.id.placeholder -> makeCurrentFragment(ActionFrag())
+                R.id.miProfile -> makeCurrentFragment(LevelFrag())
                 R.id.miSettings -> makeCurrentFragment(SettingsFrag())
             }
             true
         }
-
-        fab.setOnClickListener {
-            makeCurrentFragment(AddDeviceFrag())
-        }
-
-
 
     }
 

@@ -1,32 +1,44 @@
 package com.example.programele
 
+import android.app.Activity
+import android.app.ProgressDialog
+import android.content.ContentValues
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.facebook.FacebookSdk.getApplicationContext
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_level.*
+import kotlinx.android.synthetic.main.fragment_level.userProfile_profilePicture
+import java.util.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [LevelFrag.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LevelFrag : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private var storageReference: StorageReference? = null
+    private lateinit var imageUri: Uri
+    private var firestoreEmail: String? = null
+    private var firestoreName: String? = null
+    private var firestoreSurname: String? = null
+    private lateinit var auth: FirebaseAuth
+    private val storage: FirebaseStorage? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -37,23 +49,179 @@ class LevelFrag : Fragment() {
         return inflater.inflate(R.layout.fragment_level, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LevelFrag.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LevelFrag().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
+    override fun onResume() {
+        super.onResume()
+
+        getFirestoreVariables()
+
+        val storage: FirebaseStorage?
+        val storageReference: StorageReference?
+        val fAuth: FirebaseAuth?
+        auth = FirebaseAuth.getInstance()
+
+        storage = FirebaseStorage.getInstance()
+        storageReference = storage.getReference()
+        fAuth = FirebaseAuth.getInstance()
+
+        val profileRef: StorageReference =
+            storageReference.child("users/" + fAuth.currentUser?.uid + "/profile.jpg")
+
+//        Picasso.get().load(auth.currentUser?.photoUrl).into(userProfile_profilePicture)
+
+        profileRef.downloadUrl.addOnSuccessListener { uri ->
+            Picasso.get().load(uri).into(userProfile_profilePicture)
+        }
+
+        userProfile_changePicture.setOnClickListener{
+            choosePicture()
+        }
+
+        userProfile_profilePicture.setOnClickListener{
+            choosePicture()
+        }
+
+        userProfile_btnSave.setOnClickListener{
+            getFirestoreVariables()
+            update_profile()
+        }
+
+    }
+
+
+    fun update_profile() {
+
+        auth = FirebaseAuth.getInstance()
+        val authUser = auth.currentUser
+        val activity2: Activity? = activity
+        val db = FirebaseFirestore.getInstance()
+        val docRef = db.collection("users").document(authUser?.uid.toString())
+
+
+        if (firestoreSurname != userProfile_editSurname.text.toString() || firestoreName != userProfile_editName.text.toString()
+            || firestoreEmail != userProfile_editEmail.text.toString()) {
+
+            if (firestoreSurname != userProfile_editSurname.text.toString()) {
+                docRef.update("surname", userProfile_editSurname.text.toString())
+            }
+            if (firestoreName != userProfile_editName.text.toString()) {
+                docRef.update("name", userProfile_editName.text.toString())
+            }
+            if (firestoreEmail != userProfile_editEmail.text.toString()) {
+
+                if (isEmailValid(userProfile_editEmail.text.toString())) {
+                    docRef.update("email", userProfile_editEmail.text.toString())
+                } else {
+                    Toast.makeText(
+                        activity2,
+                        "Failed to update email, enter a valid email",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+            Toast.makeText(activity2, "Duomenys išsaugoti", Toast.LENGTH_SHORT).show()
+
+        } else {
+            Toast.makeText(activity, "Išsaugota, jokių pakeitimų neatlikta.", Toast.LENGTH_SHORT).show()
+        }
     }
+
+    fun isEmailValid(email: CharSequence?): Boolean {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
+    private fun getFirestoreVariables() {
+        auth = FirebaseAuth.getInstance()
+        val authUser = auth.currentUser
+        val activity2: Activity? = activity
+        val db = FirebaseFirestore.getInstance()
+        val docRef = db.collection("users").document(authUser?.uid.toString())
+
+        Log.d(ContentValues.TAG, "uid " + authUser?.uid.toString())
+
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    firestoreEmail = document.getString("email")
+                    firestoreName = document.getString("name")
+                    firestoreSurname = document.getString("surname")
+                    userProfile_editEmail.setText(firestoreEmail)
+                    userProfile_editName.setText(firestoreName)
+                    userProfile_editSurname.setText(firestoreSurname)
+                    Log.d(ContentValues.TAG, "DocumentSnapshot data: ${document.data}")
+                } else {
+                    Log.d(ContentValues.TAG, "No such document")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d(ContentValues.TAG, "get failed with ", exception)
+            }
+
+    }
+
+    //    private void loadImagePlaceholder(){
+    //        Picasso.get()
+    //                .load( R.drawable.loading_image )
+    //                .error( R.drawable.error_image )
+    //                .placeholder( R.drawable.progress_animation )
+    //                .into( profileImage );
+    //    }
+    private fun uploadPicture() {
+
+        val storage: FirebaseStorage?
+        val storageReference: StorageReference?
+        val fAuth: FirebaseAuth?
+        auth = FirebaseAuth.getInstance()
+
+        storage = FirebaseStorage.getInstance()
+        storageReference = storage.reference
+
+        val activity2: Activity? = activity
+        val pd = ProgressDialog(activity)
+        val authUser = auth.currentUser
+
+        pd.setTitle("Uploading Image...")
+        pd.show()
+        val randomKey = UUID.randomUUID().toString()
+        //        StorageReference fileRef = storageReference.child("images/" + randomKey);
+        //        StorageReference fileRef = storageReference.child("images/" + randomKey);
+        val fileRef =
+            storageReference.child("users/" + authUser?.uid + "/profile.jpg")
+
+        fileRef.putFile(imageUri)
+            .addOnSuccessListener {
+                pd.dismiss()
+                //                        Snackbar.make(findViewById(android.R.id.content),"Image uploaded.", Snackbar.LENGTH_LONG).show();
+                fileRef.downloadUrl.addOnSuccessListener { uri ->
+                    Picasso.get().load(uri).into(userProfile_profilePicture)
+                }
+            }
+            .addOnFailureListener {
+                pd.dismiss()
+                Toast.makeText(getApplicationContext(), "Failed To Upload", Toast.LENGTH_LONG)
+                    .show()
+            }
+            .addOnProgressListener { taskSnapshot ->
+                val progressPercent =
+                    100.00 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
+                pd.setMessage("Percentage: " + progressPercent.toInt() + "%")
+            }
+    }
+
+    private fun choosePicture() {
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(intent, 1)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
+            imageUri = data.data!!
+            //profileImage.setImageURI(imageUri);
+            uploadPicture()
+        }
+    }
+
 }

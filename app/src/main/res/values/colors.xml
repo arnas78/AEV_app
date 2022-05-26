@@ -8,7 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="underline">#0892A5</color>
-    <color name="base_green">#33C639</color>
+    <color name="base_green">#69FF88</color>
+    <color name="base_orange">#F68D31</color>
     <color name="electric_main">#0892A5</color>
     <color name="electric_secondary">#06908F</color>
     <color name="electric_light">#0CA4A5</color>
