@@ -5,14 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import java.util.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 
 private lateinit var auth: FirebaseAuth
 
@@ -38,6 +40,13 @@ class SignUp : AppCompatActivity() {
         buttonSigUp.setOnClickListener {
             register(it)
         }
+
+        register_btnBack.setOnClickListener {
+            val intent = Intent(this, Login::class.java);
+            startActivity(intent)
+        }
+
+
     }
 
     fun register(view: View) {
@@ -64,9 +73,9 @@ class SignUp : AppCompatActivity() {
                     val user = hashMapOf(
                         "username" to username,
                         "email" to email,
-                        "password" to password,
                         "name" to "",
-                        "surname" to ""
+                        "surname" to "",
+                        "rate" to 0.15
                     )
 
                     // Add a new document with an auth generated ID

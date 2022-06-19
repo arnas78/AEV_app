@@ -62,6 +62,6 @@ class FeedbackFrag : Fragment() {
     private fun openFragment() {
         val fragmentManager = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_wrapper, SettingsFrag() ).commit();
+        fragmentTransaction.replace(R.id.fl_wrapper, SettingsFrag()).addToBackStack("tag").commit();
     }
 }

@@ -7,15 +7,25 @@
     android:background="@color/newDark"
     tools:context=".SignUp">
 
+    <ImageView
+        android:id="@+id/register_btnBack"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="@color/newWhite" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/backgroundbig" />
@@ -61,7 +71,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="172dp"
         android:layout_height="47dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/button_round"
         android:backgroundTint="@color/newTeal"
         android:fontFamily="@font/poppinsbold"
@@ -70,7 +80,6 @@
         android:textColor="@color/newWhite"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -83,6 +92,9 @@
         android:ems="10"
         android:hint="Įveskite el. paštą"
         android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/newWhite"
         android:textColorHint="@color/newWhiteDark"
         app:layout_constraintEnd_toEndOf="@+id/userProfile_name2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -97,8 +109,11 @@
         android:backgroundTint="@color/newTeal"
         android:ems="10"
         android:hint="Įveskite slapyvardį"
-        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/newWhite"
         android:textColorHint="@color/newWhiteDark"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/userProfile_name3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/userProfile_name3"
@@ -113,6 +128,9 @@
         android:ems="10"
         android:hint="Įveskite slaptažodį"
         android:inputType="textPassword"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/newWhite"
         android:textColorHint="@color/newWhiteDark"
         app:layout_constraintEnd_toEndOf="@+id/userProfile_name4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -124,7 +142,7 @@
         android:layout_width="297dp"
         android:layout_height="56dp"
         android:layout_marginTop="48dp"
-        android:fontFamily="@font/poppinsmedium"
+        android:fontFamily="@font/poppinsbold"
         android:text="@string/signup"
         android:textColor="@color/newWhite"
         android:textSize="24dp"

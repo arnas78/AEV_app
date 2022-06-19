@@ -8,33 +8,89 @@
     android:background="@color/newDark">
 
 
-    <Button
-        android:id="@+id/settings_btnLogout"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <TextView
+        android:id="@+id/settings_rate"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="276dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/newTeal"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Atsijungti"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:drawableStart="@drawable/ic_baseline_attach_money_24"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/newWhite"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Keisti elektros tarifą"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/settings_title"
+        app:layout_constraintTop_toBottomOf="@+id/settings_title" />
+
+    <TextView
+        android:id="@+id/settings_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="96dp"
+        android:drawableStart="@drawable/ic_baseline_star_outline_24"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/newWhite"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Rašyti atsiliepimą"
         android:textAllCaps="false"
         android:textColor="@color/newWhite"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/settings_rate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/settings_rate"
+        app:layout_constraintTop_toBottomOf="@+id/settings_rate" />
+
+    <TextView
+        android:id="@+id/settings_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/ic_baseline_link_24"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/newWhite"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Facebook paskyra"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/settings_eula"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/settings_eula"
         app:layout_constraintTop_toBottomOf="@+id/settings_eula" />
+
+    <TextView
+        android:id="@+id/settings_instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/ic_baseline_link_24"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/newWhite"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Instagram paskyra"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/settings_facebook"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/settings_facebook"
+        app:layout_constraintTop_toBottomOf="@+id/settings_facebook" />
 
     <TextView
         android:id="@+id/settings_eula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:drawableStart="@drawable/ic_baseline_file_present_24"
+        android:drawableStart="@drawable/ic_baseline_arrow_outward_24"
         android:drawablePadding="12dp"
         android:drawableTint="@color/newWhite"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Naudotojo licencijos sutartis"
+        android:text="Mūsų tinklalapis"
         android:textAllCaps="false"
         android:textColor="@color/newWhite"
         android:textSize="20dp"
@@ -61,23 +117,23 @@
         app:layout_constraintStart_toStartOf="@+id/settings_review"
         app:layout_constraintTop_toBottomOf="@+id/settings_review" />
 
-    <TextView
-        android:id="@+id/settings_review"
+    <Button
+        android:id="@+id/settings_btnLogout"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-
-        android:layout_marginEnd="96dp"
-        android:drawableStart="@drawable/ic_baseline_star_outline_24"
-        android:drawablePadding="12dp"
-        android:drawableTint="@color/newWhite"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="Rašyti atsiliepimą"
+        android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/newTeal"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Atsijungti"
         android:textAllCaps="false"
         android:textColor="@color/newWhite"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/settings_title"
-        app:layout_constraintTop_toBottomOf="@+id/settings_title" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_instagram" />
 
     <TextView
         android:id="@+id/settings_title"

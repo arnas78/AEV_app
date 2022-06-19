@@ -39,7 +39,7 @@ class PatarimaiFrag : Fragment() {
     private fun openFragment() {
         val fragmentManager = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_wrapper, HomeFrag() ).commit();
+        fragmentTransaction.replace(R.id.fl_wrapper, HomeFrag()).addToBackStack("tag").commit();
     }
 
 }

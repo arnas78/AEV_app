@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newDark"
+    tools:context=".EditDeviceFrag"
+    android:id="@+id/fl_wrapper2">
+
+    <TextView
+        android:id="@+id/edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Įrenginio redagavimas"
+        android:textColor="@color/newWhite"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_background"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/edit_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="jelly_bean" />
+
+    <ImageView
+        android:id="@+id/edit_background"
+        android:layout_width="363dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_title"
+        app:srcCompat="@drawable/backgroundbig" />
+
+    <TextView
+        android:id="@+id/edit_chooseClass"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Pasirinkite prietaiso tipą"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_textInputLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edit_textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edit_textInputLayout" />
+
+    <Button
+        android:id="@+id/edit_btnSave"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/newTeal"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Išsaugoti"
+        android:textAllCaps="false"
+        android:textColor="@color/newWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_background"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/edit_background"
+        app:layout_constraintTop_toBottomOf="@+id/edit_background" />
+
+    <TextView
+        android:id="@+id/edit_textChooseClass"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="@string/choose_group"
+        android:textColor="@color/newWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_editAmount"
+        app:layout_constraintStart_toStartOf="@+id/edit_editAmount"
+        app:layout_constraintTop_toBottomOf="@+id/edit_editAmount" />
+
+    <EditText
+        android:id="@+id/edit_editTitle"
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/newTeal"
+        android:ems="10"
+        android:hint="Prietaiso pavadinimas"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/newWhite"
+        android:textColorHint="@color/newWhiteDark"
+        app:layout_constraintEnd_toEndOf="@+id/edit_background"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/edit_background"
+        app:layout_constraintTop_toTopOf="@+id/edit_background" />
+
+    <EditText
+        android:id="@+id/edit_editAmount"
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/newTeal"
+        android:ems="10"
+        android:hint="Prietaiso galia (W)"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/newWhite"
+        android:textColorHint="@color/newWhiteDark"
+        app:layout_constraintEnd_toEndOf="@+id/edit_editTitle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_editTitle"
+        app:layout_constraintTop_toBottomOf="@+id/edit_editTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@color/newLight"
+        app:endIconTint="@color/newWhite"
+        app:layout_constraintEnd_toEndOf="@+id/edit_textChooseClass"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/edit_textChooseClass"
+        app:layout_constraintTop_toBottomOf="@+id/edit_textChooseClass"
+        app:startIconDrawable="@drawable/ic_baseline_offline_bolt_24"
+        app:startIconTint="@color/newWhite">
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Rinktis klasę"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/newLight"
+        app:endIconTint="@color/newWhite"
+        app:layout_constraintEnd_toEndOf="@+id/edit_chooseClass"
+        app:layout_constraintStart_toStartOf="@+id/edit_chooseClass"
+        app:layout_constraintTop_toBottomOf="@+id/edit_chooseClass"
+        app:startIconDrawable="@drawable/ic_baseline_devices_24"
+        app:startIconTint="@color/newWhite">
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_autoCompleteTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Rinktis tipą"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

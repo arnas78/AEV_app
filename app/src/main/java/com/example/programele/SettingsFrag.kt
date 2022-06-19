@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.fragment_devices.*
+import io.paperdb.Paper
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 
@@ -43,6 +43,7 @@ class SettingsFrag : Fragment() {
                 DialogInterface.OnClickListener { dialog, which ->
                     when (which) {
                         DialogInterface.BUTTON_POSITIVE -> {
+                            Paper.book().destroy()
                             auth.signOut()
                             val intent = Intent (getActivity(), Login::class.java)
                             activity?.startActivity(intent)
@@ -65,13 +66,38 @@ class SettingsFrag : Fragment() {
             navToEmailCompose("arnasklimas@gmail.com", "Support", "")
         }
 
+        settings_rate.setOnClickListener{
+            openFragment2()
+        }
+
+        settings_eula.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://enertus.netlify.app"))
+            startActivity(browserIntent)
+        }
+
+        settings_facebook.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/enertus.lt"))
+            startActivity(browserIntent)
+        }
+
+        settings_instagram.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/enertus_lt/"))
+            startActivity(browserIntent)
+        }
+
+
     }
+
+
 
     private fun openFragment() {
         val fragmentManager = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_wrapper, FeedbackFrag() ).commit();
+        fragmentTransaction.replace(R.id.fl_wrapper, FeedbackFrag()).addToBackStack("tag").commit();
     }
+
+
+
 
     fun navToEmailCompose(email: String, subject: String, body: String) {
         val intent = Intent(Intent.ACTION_SENDTO,
@@ -84,7 +110,7 @@ class SettingsFrag : Fragment() {
     private fun openFragment2() {
         val fragmentManager = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_wrapper, FeedbackFrag() ).commit();
+        fragmentTransaction.replace(R.id.fl_wrapper, RateFrag()).addToBackStack("tag").commit();
     }
 
 

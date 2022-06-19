@@ -107,7 +107,7 @@ class AddDeviceFrag : Fragment() {
     private fun openFragment() {
         val fragmentManager = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_wrapper, DevicesFrag() ).commit();
+        fragmentTransaction.replace(R.id.fl_wrapper, DevicesFrag()).addToBackStack(null).commit();
     }
 
 

@@ -1,19 +1,17 @@
 package com.example.programele
 
 
-import android.app.AlertDialog
+import android.app.Activity
 import android.content.ContentValues
 import android.content.ContentValues.TAG
-import android.content.DialogInterface
-import android.nfc.Tag
 import android.os.Bundle
+import android.os.Handler
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
@@ -25,8 +23,10 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_devices.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_rate.*
 import java.util.*
 import kotlin.math.roundToInt
 
@@ -107,13 +107,25 @@ class HomeFrag : Fragment() {
 
         getPrice()
 
+        userProfile_profilePicture.setOnClickListener{
+            openFragment2()
+        }
+
 
     }
+
+
 
     private fun openFragment() {
         val fragmentManager = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_wrapper, PatarimaiFrag() ).commit();
+        fragmentTransaction.replace(R.id.fl_wrapper, PatarimaiFrag()).addToBackStack("tag").commit();
+    }
+
+    private fun openFragment2() {
+        val fragmentManager = (activity as FragmentActivity).supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fl_wrapper, LevelFrag()).addToBackStack("tag").commit();
     }
 
     private fun makeDateString(day: Int, month: Int, year: Int): String? {
@@ -146,6 +158,11 @@ class HomeFrag : Fragment() {
         //default should never happen
     }
 
+
+
+
+
+
     private fun getPrice(){
         auth = FirebaseAuth.getInstance()
         val authUser = auth.currentUser
@@ -154,42 +171,60 @@ class HomeFrag : Fragment() {
         var priceOutput = 0.0
         var timeOutput = 0.0
         var kwhOutput = 0.0
+        var dbRate = 0.0
 
-        db.collection("actions")
-            .whereEqualTo("owner",  authUser?.uid.toString())
-            .get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    android.util.Log.d(TAG, "${document.id} => ${document.data}")
 
-                    val dbPower : Double = document.get("power").toString().toDouble()
-                    val dbTime : Double = document.get("time").toString().toDouble() + 1
-                    val tarifas = 0.15
-                    val valandos = (dbTime * 30) / 60
-                    val kWh = (dbPower * valandos) / 1000
-                    val price = kWh * tarifas
-                    priceOutput += price
-                    timeOutput += valandos
-                    kwhOutput += kWh
 
+        db.collection("users").document(user?.uid.toString()).get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    android.util.Log.d(ContentValues.TAG, "DocumentSnapshot data: ${document.data}")
+                    dbRate = document.get("rate") as Double
+
+                    db.collection("actions")
+                        .whereEqualTo("owner",  authUser?.uid.toString())
+                        .get()
+                        .addOnSuccessListener { documents ->
+                            for (document in documents) {
+                                android.util.Log.d(TAG, "${document.id} => ${document.data}")
+
+                                val dbPower : Double = document.get("power").toString().toDouble()
+                                val dbTime : Double = document.get("time").toString().toDouble() + 1
+
+                                val valandos = (dbTime * 30) / 60
+                                val kWh = (dbPower * valandos) / 1000
+                                val price = kWh * dbRate
+                                priceOutput += price
+                                timeOutput += valandos
+                                kwhOutput += kWh
+
+                            }
+                            val priceRoundoff = (priceOutput * 1000.0).roundToInt() / 1000.0
+                            val priceString = priceRoundoff.toString() + " €"
+                            val timeRoundoff = (timeOutput * 100.0).roundToInt() / 100.0
+                            val timeString = timeRoundoff.toString() + " h"
+                            kwhOutput = (kwhOutput / 12.0) * 100
+                            val limitRoundoff = (kwhOutput * 100.0).roundToInt() / 100.0
+                            val limitString = limitRoundoff.toString() + " %"
+
+                            home_price.text = priceString
+                            home_time.text = timeString
+                            home_limit.text = limitString
+                        }
+                        .addOnFailureListener { exception ->
+                            android.util.Log.w(TAG, "Error getting documents: ", exception)
+                        }
+
+                } else {
+                    android.util.Log.d(ContentValues.TAG, "No such document")
                 }
-                val priceRoundoff = (priceOutput * 1000.0).roundToInt() / 1000.0
-                val priceString = priceRoundoff.toString() + " €"
-                val timeRoundoff = (timeOutput * 100.0).roundToInt() / 100.0
-                val timeString = timeRoundoff.toString() + " h"
-                kwhOutput = (kwhOutput / 12.0) * 100
-                val limitRoundoff = (kwhOutput * 100.0).roundToInt() / 100.0
-                val limitString = limitRoundoff.toString() + " %"
-
-                home_price.text = priceString
-                home_time.text = timeString
-                home_limit.text = limitString
-
-
             }
             .addOnFailureListener { exception ->
-                android.util.Log.w(TAG, "Error getting documents: ", exception)
+                android.util.Log.d(ContentValues.TAG, "get failed with ", exception)
             }
+
+
+
 
 
 
