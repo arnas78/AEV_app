@@ -63,7 +63,7 @@ class SettingsFrag : Fragment() {
         }
 
         settings_help.setOnClickListener{
-            navToEmailCompose("arnasklimas@gmail.com", "Support", "")
+            navToEmailCompose("enertus.info@gmail.com", "Support", "")
         }
 
         settings_rate.setOnClickListener{
